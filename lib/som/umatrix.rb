@@ -21,6 +21,11 @@ module SOM
       neuron_location ||= @output_space.build_neuron_position_cache
     end
 
+    def convert_to_color
+      @matrix.find_min
+      @matrix.find_max
+    end
+
     def [](x,y)
       @grid[x][y]
     end

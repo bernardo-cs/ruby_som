@@ -5,6 +5,9 @@ include ImageRuby
 #  each_row and @export_path, must be available
 module Printable
 
+  WHITE = 255
+  BLACK = 0
+
   def to_image(*args)
    case args.size 
      when 1
@@ -15,10 +18,16 @@ module Printable
        imagify(5,5)
    end 
   end
+
+  def normalize_colour avg, min, max
+    ((1-((avg.to_f-min)/(max-min)))*255).round(0)
+  end
+
   def imagify (pixel_width, pixel_height)
    Image.new(pixel_width, pixel_height, Color.from_rgb(*self.map{ |f| Integer( f.round 0 )})) if size == 3
    #print_matrix(pixel_width, pixel_height) if self.first.size == 3
   end
+
   def print_matrix (pixel_width, pixel_height)
     x,y = 0,0
     image = Image.new(pixel_width * first_row.size, pixel_height * size)
