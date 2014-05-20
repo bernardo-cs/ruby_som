@@ -6,6 +6,9 @@ module SOM
     def distance array
       zip(array).map{ |a| a.reduce(:-)**2 }.reduce(:+)
     end
+    def real_distance array
+      Math::sqrt( distance(array) )
+    end
     def learn input_pattern, learning_rate
       Neuron.new( learn_function(input_pattern, learning_rate) )
     end

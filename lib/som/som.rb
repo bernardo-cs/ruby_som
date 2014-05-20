@@ -9,13 +9,15 @@ module SOM
     def initialize learning_rate: 0.6,
                    radius: 0,
                    output_space_size: 4,
-                   epochs: 100 
+                   epochs: 100,
+                   radius_type: :circular
       @epochs = epochs
       @radius = radius
       @learning_rate = learning_rate
       @bmus_position = {}
-      @output_space = OutputSpace.new( output_space_size )
-      @input_patterns = Matrix.new(4) { InputPattern.new(4){ rand 0..1 } } 
+      @output_space = OutputSpace.new( size: output_space_size, 
+                                       radius_type: radius_type )
+      @input_patterns = Matrix.new(4){ InputPattern.new(4){ rand 0..1 } } 
     end
 
     def epoch &block
@@ -34,6 +36,10 @@ module SOM
 
     def bmus
       input_patterns.inject({}){ | hash, input |  hash[input] = @output_space[*@bmus_position[input]]; hash }
+    end
+
+    def input_patterns_for_wn
+      bmus.to_a.inject({}){ |hash, n| hash.has_key?(n.last) ? hash[n.last].push(n.first) : hash[n.last] = [n.first]; hash  }
     end
 
     def update_bmus_position input_pattern, neuron_position

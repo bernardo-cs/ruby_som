@@ -3,21 +3,26 @@ require_relative 'matrix'
 ## Two Dimensions, squared SOM Grid
 module SOM
   class OutputSpace
-    attr_accessor  :grid
+    attr_accessor  :grid, :export_path
     include Enumerable
     include Printable
+    RADIUS_TYPES = [:circular, :square].freeze
 
-    def initialize dimension
-      @grid = Matrix.new(dimension){ Array.new(dimension) }
-      @dimension = dimension
+    def initialize size: 10,
+                   radius_type: :circular,
+                   export_path: File.join(Dir.pwd,'images')  
+      @grid = Matrix.new(size){ Array.new(size) }
+      @export_path = export_path
+      @size = size
+      @radius_type = radius_type if RADIUS_TYPES.include?(radius_type)
     end
 
-    def add neuron
      ##TODO full? calls get_empty_positions
      #      without caching is ineficient
+    def add neuron
      return false if full? 
      self[*get_empty_positions.sample] = neuron
-     #x_cord,y_cord  = rand(0..@dimension-1),rand(0..@dimension-1)
+     #x_cord,y_cord  = rand(0..@size-1),rand(0..@size-1)
      #self[x_cord,y_cord].nil?  ? self[x_cord,y_cord] = neuron : add(neuron)
     end
 
@@ -34,6 +39,10 @@ module SOM
 
     def first_row
       @grid.first
+    end
+
+    def build_neuron_position_cache
+      get_all_neurons.inject({}){ |hash, n| hash[n] = find_neuron_position(n); hash }
     end
 
     def find_neuron_position neuron
@@ -126,7 +135,7 @@ module SOM
 
     def to_s
       str = "    \t" 
-      (0..(@dimension-1)).each{|n| str << " "*neurons_size*4 << "x" + n.to_s + "\t     \t" }
+      (0..(@size-1)).each{|n| str << " "*neurons_size*4 << "x" + n.to_s + "\t     \t" }
       str << "\n"
       @grid.each_with_index do |row,index|
         str << "y#{index}:\t[ "

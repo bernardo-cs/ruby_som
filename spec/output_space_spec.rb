@@ -3,7 +3,8 @@ include SOM
 
 describe OutputSpace do
   before :each do
-    @output_space = OutputSpace.new(3)
+    @output_space = OutputSpace.new( size: 3, radius_type: :square )
+                                    
     @output_space.grid = [[Neuron.new([1,1,1]), Neuron.new([2,2,2]), Neuron.new([3,3,3])],
                           [Neuron.new([4,4,4]), Neuron.new([5,5,5]), Neuron.new([6,6,6])],
                           [Neuron.new([7,7,7]), nil, Neuron.new([9,9,9])]

@@ -3,11 +3,12 @@ include SOM
 
 describe SOM do
   before :each do
-    @som = SOM::SOM.new learning_rate: 0.6, radius: 0
+    @som = SOM::SOM.new learning_rate: 0.6, radius: 0 
     @som.input_patterns = Matrix.new([[1,1,0,0],[0,0,0,1],[1,0,0,0],[0,0,1,1]])
     [ SOM::Neuron.new( [0.2,0.6,0.5,0.9]  ),
       SOM::Neuron.new( [0.8,0.4,0.7,0.3]  ) ].each{ |neuron| @som.output_space.add( neuron  )  }
   end
+
   describe '#epoch' do
     it "runs one epoch of som trainning, output space should have tained neurons" do
       @som.epoch
@@ -15,20 +16,31 @@ describe SOM do
                                                 [0.032, 0.096, 0.68, 0.984] )
     end
   end
+  
   describe 'bmus' do
-    it "returns a list of input patterns and theyre best matching units (BMUs)" do
+    it "returns a list of input patterns and their best matching units (BMUs)" do
       @som.epoch
       @som.input_patterns.each do |input|
         @som.bmus[input].should eql(@som.output_space.find_winning_neuron(input))
       end
     end
   end
+
   describe 'bmus_position' do
     it 'returns a list of the input patterns, and the location of the BMUs' do
       @som.epoch
       @som.bmus_position.each_pair do |input, bmu_pos|
         winning_neuron = @som.output_space.find_winning_neuron(input)
         @som.output_space.find_neuron_position(winning_neuron).should eql(bmu_pos)
+      end
+    end
+  end
+
+  describe '#input_patterns_for_wn' do
+    it "returns an hash with a list of the input patterns corresponding to each winning neuron" do
+      @som.epoch
+      @som.input_patterns_for_wn.each_pair do |bmu, input_patterns|
+        input_patterns.each{ |input_pattern| @som.output_space.find_winning_neuron(input_pattern).should eql(bmu)}
       end
     end
   end

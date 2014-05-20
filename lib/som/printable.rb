@@ -1,6 +1,8 @@
 require 'imageruby'
 include ImageRuby
 
+## Prints Matrixes into images
+#  each_row and @export_path, must be available
 module Printable
 
   def to_image(*args)
@@ -30,6 +32,6 @@ module Printable
       x = 0
       y += pixel_height
     end
-    image.save("som.bmp", :bmp)
+    image.save(File.join(export_path, "som.bmp"), :bmp)
   end
 end

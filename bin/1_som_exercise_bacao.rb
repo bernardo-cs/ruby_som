@@ -51,4 +51,4 @@ som.exec! do |som_state|
   iteration+=1
 end
 puts som.to_s
-
+binding.pry
