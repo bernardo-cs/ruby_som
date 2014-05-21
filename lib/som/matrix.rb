@@ -25,12 +25,17 @@ module SOM
       map{ |a| a.map{ |i| i.nil? ? "_" : i.to_s}.join(',') }.to_s
     end
 
+    def all_values
+      flat.select{ |n| !n.nil? }
+    end
+
+    ## TODO: find_min, find_max without ifs for nils
     def find_min
-      flat.inject{|min, val| min < val ? min : val}
+      all_values.inject{ |min, val| min < val ? min : val }
     end
 
     def find_max
-      flat.inject{|max, val| max > val ? max : val}
+      all_values.inject{ |max, val| max > val ? max : val }
     end
 
     def each_with_position &block

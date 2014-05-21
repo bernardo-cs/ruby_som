@@ -44,11 +44,23 @@ describe Matrix do
      end
    end
 
+   describe '#all_values' do
+     it "returns an array with all the values of a matrix, does not return nils" do
+       @matrix[0][0] = nil
+       @matrix.all_values.should eql([2,3,4,5,6,7,8,9])
+     end
+     
+   end
+
    describe '#find_min' do
      it "finds the minimum value on the matrix" do
        @matrix.find_min.should eql(1)
        @matrix[1][2] = -234
        @matrix.find_min.should eql(-234)
+     end
+     it "ignores nils" do
+       @matrix[1][1] = nil
+       @matrix.find_min.should eql(1)
      end
    end
 

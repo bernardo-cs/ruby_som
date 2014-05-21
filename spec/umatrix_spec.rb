@@ -43,4 +43,19 @@ describe UMatrix do
       end
     end
   end
+  describe '#convert_to_colour' do
+    it "converts the averages in a matrix to RGB colours" do
+      umatrix = UMatrix.new({}, Array.new(2){Array.new(2)})
+      umatrix.grid = Matrix.new(2){Array.new(2)}
+      umatrix.grid[0][0] = 0
+      umatrix.grid[0][1] = 1
+      umatrix.grid[1][0] = 1
+      umatrix.grid[1][1] = 0
+      colour_matrix = umatrix.convert_to_colour
+      colour_matrix[0][0].should eql(255) 
+      colour_matrix[0][1].should eql(0)
+      colour_matrix[1][0].should eql(0)
+      colour_matrix[1][1].should eql(255)
+    end
+  end
 end

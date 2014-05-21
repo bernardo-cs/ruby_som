@@ -4,7 +4,7 @@ require 'ruby-progressbar'
 
 module SOM
   class SOM
-    attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs
+    attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs, :umatrix
 
     def initialize learning_rate: 0.6,
                    radius: 0,
@@ -12,6 +12,7 @@ module SOM
                    epochs: 100,
                    radius_type: :circular
       @epochs = epochs
+      @umatrix = Matrix.new( output_space_size ){ Array.new(output_space_size) }
       @radius = radius
       @learning_rate = learning_rate
       @bmus_position = {}
@@ -32,6 +33,13 @@ module SOM
         end
       end
       update!
+    end
+
+    def create_umatrix file_name
+      @umatrix = UMatrix.new( input_patterns_for_wn, @output_space )
+      @umatrix.create_grid! 
+      @umatrix.convert_to_colour!
+      @umatrix.print_matrix(5,5,file_name: file_name)
     end
 
     def bmus

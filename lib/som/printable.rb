@@ -20,15 +20,15 @@ module Printable
   end
 
   def normalize_colour avg, min, max
-    ((1-((avg.to_f-min)/(max-min)))*255).round(0)
+    avg.nil? ? BLACK : ((1-((avg.to_f-min)/(max-min)))*255).round(0)
   end
 
   def imagify (pixel_width, pixel_height)
-   Image.new(pixel_width, pixel_height, Color.from_rgb(*self.map{ |f| Integer( f.round 0 )})) if size == 3
+    Array(self).size == 3 ? Image.new(pixel_width, pixel_height, Color.from_rgb(*self.map{ |f| Integer( f.round 0 )})) : Image.new(pixel_width, pixel_height, Color.from_rgb(self,self,self)) 
    #print_matrix(pixel_width, pixel_height) if self.first.size == 3
   end
 
-  def print_matrix (pixel_width, pixel_height)
+  def print_matrix (pixel_width, pixel_height, file_name: "som.bmp")
     x,y = 0,0
     image = Image.new(pixel_width * first_row.size, pixel_height * size)
     each_row do |row|
@@ -41,6 +41,6 @@ module Printable
       x = 0
       y += pixel_height
     end
-    image.save(File.join(export_path, "som.bmp"), :bmp)
+    image.save(File.join(export_path, file_name), :bmp)
   end
 end

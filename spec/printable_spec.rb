@@ -26,5 +26,9 @@ describe Printable do
        @printable.normalize_colour(50,min,max).should be >= @printable.normalize_colour(200,min,max)  
        @printable.normalize_colour(300,min,max).should be <= @printable.normalize_colour(200,min,max)  
      end
+     # black is returned for nil because it repesents the biggest average distance
+     it "returns the color black if it receives nil" do
+       @printable.normalize_colour(nil,2,6).should eql(Printable::BLACK)
+     end
    end
 end
