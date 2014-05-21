@@ -15,7 +15,7 @@ som = SOM::SOM.new output_space_size: 25,
 ## Generate 1500 random input patterns
 som.input_patterns = 1500.times.inject([]){ |arr| arr << Array.new(3){ rand(0..255) }; arr  }
 
-som.exec!
+som.exec_and_print_steps!('first_som') 
 som.output_space.print_matrix(5,5, file_name: '1_som.bmp')
 som.create_umatrix('1_som_umatrix.bmp')
 

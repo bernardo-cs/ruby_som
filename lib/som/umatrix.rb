@@ -30,7 +30,11 @@ module SOM
     end
 
     def neuron_location
-      neuron_location ||= @output_space.build_neuron_position_cache
+      @output_space.build_neuron_position_cache
+      #TODO: The next line is this function with cache. Very pretty for 
+      #      long executions, but fucks up printing every step of a som 
+      #      train
+      #neuron_location ||= @output_space.build_neuron_position_cache
     end
 
     def convert_to_colour

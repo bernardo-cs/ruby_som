@@ -1,6 +1,7 @@
 require_relative 'input_pattern'
 require_relative 'matrix'
 require 'ruby-progressbar'
+require 'fileutils'
 
 module SOM
   class SOM
@@ -54,6 +55,16 @@ module SOM
      @bmus_position[input_pattern] = neuron_position 
     end
 
+    def exec_and_print_steps! output_folder
+      FileUtils::mkdir_p (File.join(Dir.pwd,'images', output_folder))      
+      step = 0
+      exec!  do |som|
+        som.output_space.print_matrix(5,5, file_name: "#{output_folder}\/#{step}_som.bmp")
+        som.create_umatrix("#{output_folder}\/#{step}_som_umatrix.bmp")
+        step =+ 1
+      end
+    end
+    
     def exec! &block
       progress = ProgressBar.create(:title => "Will run #{@epochs} epochs", :starting_at => 0, :total => @epochs, :format => '%a %B %p%% %t')
       epochs.times{ both_have_converged? ? break : epoch; progress.increment; yield self if block_given? }
