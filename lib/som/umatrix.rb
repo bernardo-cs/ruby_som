@@ -1,5 +1,3 @@
-require 'pry'
-require_relative 'matrix.rb'
 module SOM
   class UMatrix 
     include Printable

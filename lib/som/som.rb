@@ -1,28 +1,27 @@
-require_relative 'input_pattern'
-require_relative 'matrix'
-require 'ruby-progressbar'
-require 'fileutils'
+require_relative 'functions'
 
 module SOM
   class SOM
-    attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs, :umatrix
+    include SOM::Functions
+    attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs, :umatrix, :initial_radius, :initial_learning_rate
 
     def initialize learning_rate: 0.6,
-                   radius: 0,
                    output_space_size: 4,
                    epochs: 100,
-                   radius_type: :circular
+                   radius_type: :circular,
+                   force_radius: nil
       @epochs = epochs
       @umatrix = Matrix.new( output_space_size ){ Array.new(output_space_size) }
-      @radius = radius
       @learning_rate = learning_rate
       @bmus_position = {}
-      @output_space = OutputSpace.new( size: output_space_size, 
-                                       radius_type: radius_type )
       @input_patterns = Matrix.new(4){ InputPattern.new(4){ rand 0..1 } } 
+      @output_space = OutputSpace.new( size: output_space_size,radius_type: radius_type )
+      @radius =  force_radius || (measures.max/2.0).round(0) 
+      @initial_radius =  @radius
+      @initial_learning_rate = @learning_rate
     end
 
-    def epoch &block
+    def epoch iteration=1, &block
       input_patterns.each do |input_pattern|
         wn = output_space.find_winning_neuron(input_pattern)
         wn_position = output_space.find_neuron_position(wn)
@@ -33,7 +32,7 @@ module SOM
           output_space.update_neuron_at_position(updated_neuron, updated_neuron_position)
         end
       end
-      update!
+      update!(iteration)
     end
 
     def create_umatrix file_name
@@ -49,6 +48,13 @@ module SOM
 
     def input_patterns_for_wn
       bmus.to_a.inject({}){ |hash, n| hash.has_key?(n.last) ? hash[n.last].push(n.first) : hash[n.last] = [n.first]; hash  }
+    end
+
+    def temporal_const
+      @epochs/(Math::log(@radius))
+    end
+    def measures
+      [@output_space.grid.size, @output_space.grid.first.size]
     end
 
     def update_bmus_position input_pattern, neuron_position
@@ -67,31 +73,20 @@ module SOM
     
     def exec! &block
       progress = ProgressBar.create(:title => "Will run #{@epochs} epochs", :starting_at => 0, :total => @epochs, :format => '%a %B %p%% %t')
-      epochs.times{ both_have_converged? ? break : epoch; progress.increment; yield self if block_given? }
+      epochs.times{ |iteration| epoch(iteration); progress.increment; yield self if block_given? }
     end
 
-    def both_have_converged?
-      learning_rate_converged? || radius_converged?
+    def update! iteration
+      update_radius!(iteration) ; update_learning_rate!(iteration)
     end
 
-    def learning_rate_converged?
-      Float(learning_rate).round(3) == 0 
+    def update_radius! iteration 
+      #@radius = (@radius/2)
+      @radius = exponential_decay( initial_radius, temporal_const, iteration ).round(0) 
     end
 
-    def radius_converged?
-      Float(radius).round(0) == 0
-    end
-
-    def update!
-      update_radius! ; update_learning_rate!
-    end
-
-    def update_radius!
-      @radius = (@radius/2)
-    end
-
-    def update_learning_rate!
-      @learning_rate = (@learning_rate/2)
+    def update_learning_rate! iteration 
+      @learning_rate = exponential_decay( initial_learning_rate, temporal_const, iteration )
     end
 
     def to_s

@@ -7,11 +7,7 @@ module SOM
   require_relative 'som/umatrix'
   require_relative 'som/printable'
   require_relative 'som/fixnum'
-
-  def example
-    o = SOM.new
-  end
+  require_relative 'som/functions'
+  require 'bundler/setup'
+  Bundler.require
 end
-
-
-include SOM

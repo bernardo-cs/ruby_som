@@ -1,5 +1,5 @@
 require_relative '../lib/som'
-include SOM
+#include SOM
 
 describe Neuron do
   before :each do

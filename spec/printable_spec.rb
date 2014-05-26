@@ -1,4 +1,4 @@
-require_relative '../lib/som'
+#require_relative '../lib/som'
 
 class DummyClass
 
