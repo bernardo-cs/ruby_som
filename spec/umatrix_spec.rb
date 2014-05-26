@@ -1,6 +1,5 @@
-require_relative '../lib/som'
-
-include SOM
+#require_relative '../lib/som'
+#include SOM
 
 describe UMatrix do
   

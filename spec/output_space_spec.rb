@@ -1,5 +1,5 @@
-require_relative '../lib/som'
-include SOM
+#require_relative '../lib/som'
+#include SOM
 
 describe OutputSpace do
   before :each do

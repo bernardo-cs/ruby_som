@@ -1,5 +1,3 @@
-require 'pry'
-require_relative 'matrix'
 ## Two Dimensions, squared SOM Grid
 module SOM
   class OutputSpace
