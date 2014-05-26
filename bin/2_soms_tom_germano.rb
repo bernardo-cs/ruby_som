@@ -1,7 +1,6 @@
-require 'pry'
+#require 'pry'
 require_relative '../lib/som.rb'
-require 'benchmark'
-
+#require 'benchmark'
 
 ## Initialize the Output Space randomly
 #  A) Initialize the SOM with 100 random neurons,

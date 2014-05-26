@@ -1,4 +1,5 @@
 module SOM
+  require_relative 'som/matrix'
   require_relative 'som/printable'
   require_relative 'som/neuron'
   require_relative 'som/output_space'
