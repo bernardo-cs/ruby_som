@@ -51,7 +51,7 @@ describe SOM do
 
   describe '#temporal_const' do
     it "returns the som temporal const (lambda)" do
-      @som.temporal_const.round(0).should eql(144)
+      @som.temporal_const_radius.round(0).should eql(144)
     end
     
   end

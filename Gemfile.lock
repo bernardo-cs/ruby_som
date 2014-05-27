@@ -5,11 +5,15 @@ GEM
     diff-lcs (1.2.5)
     imageruby (0.2.5)
     imageruby-bmp (0.1.0)
+    interception (0.5)
     method_source (0.8.2)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-rescue (1.4.1)
+      interception (>= 0.5)
+      pry
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -28,6 +32,7 @@ DEPENDENCIES
   imageruby
   imageruby-bmp
   pry
+  pry-rescue
   rspec
   rspec-core
   ruby-progressbar

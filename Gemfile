@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem "pry"
+gem "pry-rescue"
 gem "rspec-core"
 gem "rspec"
 gem "ruby-progressbar"

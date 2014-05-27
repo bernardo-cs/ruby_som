@@ -50,9 +50,16 @@ module SOM
       bmus.to_a.inject({}){ |hash, n| hash.has_key?(n.last) ? hash[n.last].push(n.first) : hash[n.last] = [n.first]; hash  }
     end
 
-    def temporal_const
-      @epochs/(Math::log(@radius))
+    def temporal_const_radius
+      lamb(@epochs, @initial_radius)
+      #@epochs/(Math::log(@radius))
     end
+
+    def temporal_const_learn_rate      
+      lamb(@epochs, @initial_learning_rate)
+      #@epochs/(Math::log(@radius))
+    end
+
     def measures
       [@output_space.grid.size, @output_space.grid.first.size]
     end
@@ -82,11 +89,13 @@ module SOM
 
     def update_radius! iteration 
       #@radius = (@radius/2)
-      @radius = exponential_decay( initial_radius, temporal_const, iteration ).round(0) 
+      @radius = exponential_decay( initial_radius, temporal_const_radius, iteration ).round(0) 
     end
 
     def update_learning_rate! iteration 
-      @learning_rate = exponential_decay( initial_learning_rate, temporal_const, iteration )
+      ## if the second param was epochs, it would converge to a value far from 0
+      #  when the learning rate is equal to 0.6
+      @learning_rate = exponential_decay( initial_learning_rate, @epochs/2, iteration )
     end
 
     def to_s
