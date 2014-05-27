@@ -6,5 +6,9 @@ module SOM
     def lamb x,y
       Float(x)/(Math::log(y))
     end
+    def influence dist, max_dist
+      1.0 - (Float(dist)/Float(max_dist + 1))
+      #Math::exp( (( dist**2 ) / (2.0 * (max_dist**2))) )
+    end
   end
 end

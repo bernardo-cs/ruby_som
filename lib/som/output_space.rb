@@ -70,6 +70,13 @@ module SOM
       neurons
     end
 
+    def get_neurons_in_circular_radius_with_distance center, radius, &block
+      get_neurons_in_radius(center,radius).each do |neuron|
+        neuron_position = find_neuron_position( neuron )
+        distance = Math::sqrt(center.zip(neuron_position).map{ |x| x.reduce(:-)  }.map{|x| x**2}.reduce(:+)) 
+        yield neuron, distance if distance <= radius
+      end
+    end
     def get_neurons_in_circular_radius center, radius
       neurons = []
       get_neurons_in_radius(center,radius).each do |neuron|
@@ -78,6 +85,7 @@ module SOM
       end
       neurons
     end
+
     def get_all_neurons
       arr = []
       self.each{ |neuron| arr << neuron }

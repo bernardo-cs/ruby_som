@@ -26,9 +26,9 @@ module SOM
         wn = output_space.find_winning_neuron(input_pattern)
         wn_position = output_space.find_neuron_position(wn)
         update_bmus_position( input_pattern, wn_position )
-        output_space.get_neurons_in_circular_radius(wn_position, radius).each do |neuron|
+        output_space.get_neurons_in_circular_radius_with_distance(wn_position, radius) do |neuron, distance|
           updated_neuron_position = output_space.find_neuron_position(neuron)
-          updated_neuron = neuron.learn(input_pattern, learning_rate)
+          updated_neuron = neuron.learn(input_pattern, influence(distance, radius) * learning_rate)
           output_space.update_neuron_at_position(updated_neuron, updated_neuron_position)
         end
       end
@@ -67,8 +67,9 @@ module SOM
       FileUtils::mkdir_p (File.join(Dir.pwd,'images', output_folder))      
       aux = 0
       exec!  do |som|
-        som.output_space.print_matrix(5,5, file_name: "#{output_folder}\/#{aux}_som.bmp")
-        som.create_umatrix("#{output_folder}\/#{aux}_som_umatrix.bmp")
+        file_name = "#{output_folder}\/#{aux}_radius_#{som.radius}_learning_rate_#{som.learning_rate.round(3)}" 
+        som.output_space.print_matrix(5,5, file_name: file_name + '_som.bmp' )
+        som.create_umatrix( file_name + '_umatrix.bmp' )
         aux += 1
       end
     end
