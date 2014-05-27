@@ -55,11 +55,6 @@ module SOM
       #@epochs/(Math::log(@radius))
     end
 
-    def temporal_const_learn_rate      
-      lamb(@epochs, @initial_learning_rate)
-      #@epochs/(Math::log(@radius))
-    end
-
     def measures
       [@output_space.grid.size, @output_space.grid.first.size]
     end
@@ -70,11 +65,12 @@ module SOM
 
     def exec_and_print_steps! output_folder
       FileUtils::mkdir_p (File.join(Dir.pwd,'images', output_folder))      
-      step = 0
+      aux = 0
       exec!  do |som|
-        som.output_space.print_matrix(5,5, file_name: "#{output_folder}\/#{step}_som.bmp")
-        som.create_umatrix("#{output_folder}\/#{step}_som_umatrix.bmp")
-        step =+ 1
+        binding.pry
+        som.output_space.print_matrix(5,5, file_name: "#{output_folder}\/#{aux}_som.bmp")
+        som.create_umatrix("#{output_folder}\/#{aux}_som_umatrix.bmp")
+        aux += 1
       end
     end
     
