@@ -67,7 +67,6 @@ module SOM
       FileUtils::mkdir_p (File.join(Dir.pwd,'images', output_folder))      
       aux = 0
       exec!  do |som|
-        binding.pry
         som.output_space.print_matrix(5,5, file_name: "#{output_folder}\/#{aux}_som.bmp")
         som.create_umatrix("#{output_folder}\/#{aux}_som_umatrix.bmp")
         aux += 1
