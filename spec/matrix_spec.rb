@@ -72,4 +72,10 @@ describe Matrix do
      end
    end
   end
+
+  describe '#avg' do
+    it "calculates the average of all matrix values" do
+      @matrix.avg.should eql(5.0)
+    end
+  end
 end

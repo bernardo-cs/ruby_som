@@ -27,6 +27,10 @@ describe UMatrix do
       second_distance = Math::sqrt(((1.2-3)**2 + (5.4-4)**2))
       umatrix.average_distance( Neuron.new([1.2,5.4]) , [[1,1],[3,4]] ).should eql((first_distance + second_distance) /2)
     end
+    it "has to keep working with large neurons with weird numers" do
+      umatrix = UMatrix.new({}, [])
+      umatrix.average_distance( Neuron.new([1,2,3,4,5,6,7,8,9]) , [[0,0,0,2,0,0,0,0,0],[0,0,0,2,0,0,0,0,0]] ).round(0).should eql(17)
+    end
   end
   describe '#neuron_location' do
     it "returns a list of the neurons and theire location in the outputspace" do

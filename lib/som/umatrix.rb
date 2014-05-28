@@ -15,8 +15,10 @@ module SOM
       @bmus_list.each_pair{ |neuron, input_patterns| self[*neuron_location[neuron]] = average_distance(neuron, input_patterns) }
     end
 
+    # TODO: verify if the comented method was actually wrong.. it probably wasnt
     def average_distance neuron, input_patterns
-      input_patterns.inject(neuron.real_distance(input_patterns.first)){ |avg, ip| avg = ((avg + ((neuron.real_distance(ip))))/2); avg  }
+       input_patterns.map{ |i| neuron.real_distance(i) }.instance_eval{ reduce(:+) / size.to_f }
+      #input_patterns.inject(neuron.real_distance(input_patterns.first)){ |avg, ip| avg = ((avg + ((neuron.real_distance(ip))))/2); avg  }
     end
 
     def size

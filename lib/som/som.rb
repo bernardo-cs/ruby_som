@@ -28,19 +28,22 @@ module SOM
         update_bmus_position( input_pattern, wn_position )
         output_space.get_neurons_in_circular_radius_with_distance(wn_position, radius) do |neuron, distance|
           updated_neuron_position = output_space.find_neuron_position(neuron)
-          updated_neuron = neuron.learn(input_pattern, influence(distance, radius) * learning_rate)
+          updated_neuron = neuron.learn(input_pattern, influence(distance, radius)*learning_rate)
           output_space.update_neuron_at_position(updated_neuron, updated_neuron_position)
         end
       end
       update!(iteration)
     end
 
-    def create_umatrix file_name
+    def create_umatrix 
       @umatrix = UMatrix.new( input_patterns_for_wn, @output_space )
       @umatrix.create_grid! 
+    end
+
+     def print_umatrix  file_name
       @umatrix.convert_to_colour!
       @umatrix.print_matrix(5,5,file_name: file_name)
-    end
+     end
 
     def bmus
       input_patterns.inject({}){ | hash, input |  hash[input] = @output_space[*@bmus_position[input]]; hash }
@@ -69,7 +72,8 @@ module SOM
       exec!  do |som|
         file_name = "#{output_folder}\/#{aux}_radius_#{som.radius}_learning_rate_#{som.learning_rate.round(3)}" 
         som.output_space.print_matrix(5,5, file_name: file_name + '_som.bmp' )
-        som.create_umatrix( file_name + '_umatrix.bmp' )
+        som.create_umatrix
+        print_umatrix( file_name + "_avg_#{@umatrix.grid.avg.round(3)}" + '_umatrix.bmp' )
         aux += 1
       end
     end
