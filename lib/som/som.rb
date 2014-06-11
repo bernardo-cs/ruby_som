@@ -59,7 +59,7 @@ module SOM
     end
 
     def measures
-      [@output_space.grid.size, @output_space.grid.first.size]
+        [@output_space.grid.size, @output_space.grid.first.size]
     end
 
     def update_bmus_position input_pattern, neuron_position
