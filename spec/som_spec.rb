@@ -20,6 +20,7 @@ describe SOM do
         "[000.210,000.070,000.630,000.80],[0, 0, 1, 1]")
     end
   end
+
   describe 'bmus' do
     it "returns a list of input patterns and their best matching units (BMUs)" do
       @som.epoch

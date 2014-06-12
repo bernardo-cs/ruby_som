@@ -1,5 +1,7 @@
 module SOM
   class Matrix < Array
+    alias_method :first_row, :first
+
     def full?
       open_positions().inject(0){|memo, n| memo = memo+n} == 0 ? true : false
     end
@@ -49,5 +51,16 @@ module SOM
         end
       end
     end
+
+    def []=(*args)
+      args.size == 2 ? super(args.first, args.last) : self[args.first][args[1]] = args.last 
+    end
+
+    def [](*args)
+      ## Return nil if coordinates are beyond the grid boundaries
+        #return nil if args.first < 0 || args[1] < 0 || args.first >= self.size || args[1] >= self.first.size
+        args.size == 2 ? super(args.first)[args.last] : super(args.first)
+    end
+ 
   end
 end

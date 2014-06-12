@@ -21,13 +21,7 @@ module SOM
       #input_patterns.inject(neuron.real_distance(input_patterns.first)){ |avg, ip| avg = ((avg + ((neuron.real_distance(ip))))/2); avg  }
     end
 
-    def size
-      @grid.size
-    end
     
-    def first_row
-      @grid.first
-    end
 
     def neuron_location
       @output_space.build_neuron_position_cache
@@ -48,6 +42,14 @@ module SOM
 
     def convert_to_colour!
       @grid = convert_to_colour
+    end
+
+    def size
+      @grid.size
+    end
+
+    def first_row
+      @grid.first_row
     end
 
     def each_row(&block)
