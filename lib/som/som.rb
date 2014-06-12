@@ -25,7 +25,7 @@ module SOM
       input_patterns.each do |input_pattern|
         wn = output_space.find_winning_neuron(input_pattern)
         wn_position = output_space.find_neuron_position(wn)
-        update_bmus_position(, wn_position )
+        update_bmus_position( input_pattern, wn_position )
         output_space.get_neurons_in_circular_radius_with_distance(wn_position, radius) do |neuron, distance|
           updated_neuron_position = output_space.find_neuron_position(neuron)
           updated_neuron = neuron.learn(input_pattern, influence(distance, radius)*learning_rate)

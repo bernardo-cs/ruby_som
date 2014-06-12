@@ -139,6 +139,20 @@ module SOM
       @grid.size
     end
 
+     def []=(x,y,neuron)
+      @grid[x][y] = neuron
+    end
+
+    def [](x,y)
+      ## Return nil if coordinates are beyond the grid boundaries
+      return nil if x < 0 || y < 0 || x >= @grid.size || y >= @grid.first.size
+      @grid[x][y]
+    end
+    
+    def size
+      @grid.size
+    end
+
     def to_s
       str = "    \t" 
       (0..(@size-1)).each{|n| str << " "*neurons_size*4 << "x" + n.to_s + "\t     \t" }
