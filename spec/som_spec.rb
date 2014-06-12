@@ -9,16 +9,17 @@ describe SOM do
       SOM::Neuron.new( [0.8,0.4,0.7,0.3]  ) ].each{ |neuron| @som.output_space.add( neuron  )  }
   end
 
-  ## Must be re testested
-  #describe '#epoch' do
-    #it "runs one epoch of som trainning, output space should have tained neurons" do
-      #@som.radius = 0
-      #@som.epoch
-      #expect(@som.output_space.flat.map{ |a| a.round(3) unless a.nil? }).to include([0.968, 0.304, 0.112, 0.048],
-                                                #[0.032, 0.096, 0.68, 0.984] )
-    #end
-  #end
-  
+  describe 'bmus_to_csv' do
+    it "returns a csv file with the list of neurons and their corresponding input pattern" do
+      @som.epoch
+      @som.bmus_to_csv('/tmp/bmus_list.csv')
+      File.read('/tmp/bmus_list.csv').split("\n").should include(
+        "[000.490,000.110,000.440,000.51],[1, 1, 0, 0]",
+        "[000.210,000.070,000.630,000.80],[0, 0, 0, 1]",
+        "[000.490,000.110,000.440,000.51],[1, 0, 0, 0]",
+        "[000.210,000.070,000.630,000.80],[0, 0, 1, 1]")
+    end
+  end
   describe 'bmus' do
     it "returns a list of input patterns and their best matching units (BMUs)" do
       @som.epoch

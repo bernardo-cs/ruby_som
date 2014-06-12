@@ -25,7 +25,7 @@ module SOM
       input_patterns.each do |input_pattern|
         wn = output_space.find_winning_neuron(input_pattern)
         wn_position = output_space.find_neuron_position(wn)
-        update_bmus_position( input_pattern, wn_position )
+        update_bmus_position(, wn_position )
         output_space.get_neurons_in_circular_radius_with_distance(wn_position, radius) do |neuron, distance|
           updated_neuron_position = output_space.find_neuron_position(neuron)
           updated_neuron = neuron.learn(input_pattern, influence(distance, radius)*learning_rate)
@@ -47,6 +47,11 @@ module SOM
 
     def bmus
       input_patterns.inject({}){ | hash, input |  hash[input] = @output_space[*@bmus_position[input]]; hash }
+    end
+
+    def bmus_to_csv(file_name)
+      inst_bmus = bmus()
+      File.open(file_name, 'w'){ |file| @input_patterns.each{ |input_pattern| file.puts( "#{inst_bmus[input_pattern]},#{input_pattern}"  )}  }
     end
 
     def input_patterns_for_wn
