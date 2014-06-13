@@ -1,5 +1,4 @@
 module Matrixable
-
   def size
     @grid.size
   end
@@ -21,45 +20,45 @@ module Matrixable
 
     ##TODO full? calls get_empty_positions
      #      without caching is ineficient
-    def add neuron
+    def add element
      return false if full? 
-     self[*get_empty_positions.sample] = neuron
+     self[*get_empty_positions.sample] = element
     end
 
     def get_all_elements
       arr = []
-      self.each{ |neuron| arr << neuron }
+      self.each{ |element| arr << element }
       arr
     end
 
-    def find_element_position neuron
+    def find_element_position element
       position = [nil,nil]
       @grid.each_with_index do |column, column_index|
         column.each_with_index do |n, row_index|
-          position[0],position[1] = column_index,row_index if neuron == n
+          position[0],position[1] = column_index,row_index if element == n
         end
       end
       position.first.nil? ? nil : position
     end
 
      def get_elements_in_radius center, radius
-      neurons = []
+      elements = []
       x_borders = [center.first - radius, center.first + radius]
       y_borders = [center.last - radius, center.last + radius]
       (x_borders.first..x_borders.last).each do |x_cord|
         (y_borders.first..y_borders.last).each do |y_cord|
-          neuron = self[x_cord, y_cord]
-          neurons << neuron unless neuron.nil?
+          element = self[x_cord, y_cord]
+          elements << element unless element.nil?
         end
       end
-      neurons
+      elements
     end 
 
     def get_empty_positions &block
       @grid.each.with_index.inject([]) do |array, (row, row_number)|
-        row.each.with_index do |neuron, column_number|
-        array << [row_number, column_number] if neuron.nil?
-        yield array.last if block_given? && neuron.nil?
+        row.each.with_index do |element, column_number|
+        array << [row_number, column_number] if element.nil?
+        yield array.last if block_given? && element.nil?
         array
       end 
       array
@@ -67,7 +66,7 @@ module Matrixable
     end
 
     def each
-      @grid.each{|column| column.each{|neuron| yield neuron unless neuron.nil? }}
+      @grid.each{|column| column.each{|element| yield element unless element.nil? }}
     end
 
   def [](x,y)
@@ -75,43 +74,43 @@ module Matrixable
     @grid[x][y]
   end
 
-  def []=(x,y,neuron)
-    @grid[x][y] = neuron
+  def []=(x,y,element)
+    @grid[x][y] = element
   end     
 
   #methods dependent on other methods
   def build_element_position_cache
-    get_all_elements.inject({}){ |hash, n| hash[n] = find_neuron_position(n); hash }
+    get_all_elements.inject({}){ |hash, n| hash[n] = find_element_position(n); hash }
   end
 
-  def add_element_at_pos neuron, position
-    self[position.first, position.last] = neuron 
+  def add_element_at_pos element, position
+    self[position.first, position.last] = element 
   end
 
   def full?
     get_empty_positions.count == 0 ? true : false
   end
 
-  ##TODO: Just get the first neuron that appears, instead of all
+  ##TODO: Just get the first element that appears, instead of all
   def elements_size
     get_all_elements.first.size
   end
 
     def get_elements_in_circular_radius_with_distance center, radius, &block
-      get_neurons_in_radius(center,radius).each do |neuron|
-        neuron_position = find_neuron_position( neuron )
-        distance = Math::sqrt(center.zip(neuron_position).map{ |x| x.reduce(:-)  }.map{|x| x**2}.reduce(:+)) 
-        yield neuron, distance if distance <= radius
+      get_elements_in_radius(center,radius).each do |element|
+        element_position = find_element_position( element )
+        distance = Math::sqrt(center.zip(element_position).map{ |x| x.reduce(:-)  }.map{|x| x**2}.reduce(:+)) 
+        yield element, distance if distance <= radius
       end
     end
 
     def get_elements_in_circular_radius center, radius
-      neurons = []
-      get_neurons_in_radius(center,radius).each do |neuron|
-        neuron_position = find_neuron_position( neuron )
-        neurons << neuron if Math::sqrt(center.zip(neuron_position).map{ |x| x.reduce(:-)  }.map{|x| x**2}.reduce(:+)) <= radius
+      elements = []
+      get_elements_in_radius(center,radius).each do |element|
+        element_position = find_element_position( element )
+        elements << element if Math::sqrt(center.zip(element_position).map{ |x| x.reduce(:-)  }.map{|x| x**2}.reduce(:+)) <= radius
       end
-      neurons
+      elements
     end
 
 end
