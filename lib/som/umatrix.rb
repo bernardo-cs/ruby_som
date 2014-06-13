@@ -1,6 +1,7 @@
 module SOM
   class UMatrix 
     include Printable
+    include Matrixable
     attr_accessor :bmus_list, :output_space, :grid, :export_path
 
     def initialize(bmus_list, output_space, 
@@ -20,8 +21,6 @@ module SOM
        input_patterns.map{ |i| neuron.real_distance(i) }.instance_eval{ reduce(:+) / size.to_f }
       #input_patterns.inject(neuron.real_distance(input_patterns.first)){ |avg, ip| avg = ((avg + ((neuron.real_distance(ip))))/2); avg  }
     end
-
-    
 
     def neuron_location
       @output_space.build_neuron_position_cache
@@ -44,24 +43,25 @@ module SOM
       @grid = convert_to_colour
     end
 
-    def size
-      @grid.size
-    end
+    #Vai Bazar
+    #def size
+      #@grid.size
+    #end
 
-    def first_row
-      @grid.first_row
-    end
+    #def first_row
+      #@grid.first_row
+    #end
 
-    def each_row(&block)
-      @grid.each(&block)
-    end
+    #def each_row(&block)
+      #@grid.each(&block)
+    #end
 
-    def [](x,y)
-      @grid[x][y]
-    end
+    #def [](x,y)
+      #@grid[x,y]
+    #end
 
-    def []=(x,y,neuron)
-      @grid[x][y] = neuron
-    end 
+    #def []=(x,y,neuron)
+      #@grid[x,y] = neuron
+    #end 
   end
 end
