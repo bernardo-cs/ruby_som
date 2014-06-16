@@ -5,7 +5,6 @@ module SOM
     include Enumerable
     include Matrixable
     include Printable
-    RADIUS_TYPES = [:circular, :square].freeze
 
     alias_method :get_neurons_in_radius, :get_elements_in_radius 
     alias_method :find_neuron_position, :find_element_position 

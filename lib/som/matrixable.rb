@@ -1,4 +1,5 @@
 module Matrixable
+  RADIUS_TYPES = [:circular, :square].freeze
   def size
     @grid.size
   end

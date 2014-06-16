@@ -14,6 +14,6 @@ som = SOM::SOM.new output_space_size: 15,
 ## Generate 1500 random input patterns
 som.input_patterns = 1500.times.inject([]){ |arr| arr << Array.new(3){ rand(0..255) }; arr  }
 
-som.exec_and_print_steps!('test_folder_4')
+som.exec_and_print_steps!('test_folder_5')
 
 #`say Finished training everything, Sir`
