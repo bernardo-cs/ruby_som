@@ -35,7 +35,6 @@ module SOM
      all_values.instance_eval { reduce(:+) / size.to_f }
     end
 
-    ## TODO: find_min, find_max without ifs for nils
     def find_min
       all_values.inject{ |min, val| min < val ? min : val }
     end
