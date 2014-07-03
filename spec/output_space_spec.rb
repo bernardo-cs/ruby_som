@@ -122,13 +122,14 @@ describe OutputSpace do
       @output_space[-3,-5].should be_nil
     end
   end
+
   describe '#[]=' do
     it "associates a neuron to the specifiend position" do
       @output_space[0,0] = Neuron.new([1,2,3])
       @output_space[0,0].should eql(Neuron.new([1,2,3]))
-      
     end
   end
+
   describe '#get_empty_positions' do
     it "should return an array with the avaylable positions in the grid" do
       expect(@output_space.get_empty_positions).to include([2,1])

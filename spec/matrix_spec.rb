@@ -73,6 +73,13 @@ describe Matrix do
    end
   end
 
+  describe '[]=' do
+    it "associates a value to a position of a matrix" do
+      @matrix[0,1] = 1000
+      @matrix[0][1].should eql(1000)
+      @matrix[0].size.should eql(3)
+    end
+  end
   describe '#avg' do
     it "calculates the average of all matrix values" do
       @matrix.avg.should eql(5.0)

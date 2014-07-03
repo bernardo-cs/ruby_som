@@ -9,17 +9,20 @@ describe SOM do
       SOM::Neuron.new( [0.8,0.4,0.7,0.3]  ) ].each{ |neuron| @som.output_space.add( neuron  )  }
   end
 
-  describe 'bmus_to_csv' do
-    it "returns a csv file with the list of neurons and their corresponding input pattern" do
-      @som.epoch
-      @som.bmus_to_csv('/tmp/bmus_list.csv')
-      File.read('/tmp/bmus_list.csv').split("\n").should include(
-        "[000.490,000.110,000.440,000.51],[1, 1, 0, 0]",
-        "[000.210,000.070,000.630,000.80],[0, 0, 0, 1]",
-        "[000.490,000.110,000.440,000.51],[1, 0, 0, 0]",
-        "[000.210,000.070,000.630,000.80],[0, 0, 1, 1]")
-    end
-  end
+  ## Must find a way to test this without getting random trainning values..
+  ## Probably by creating the bmus by hand
+  #describe 'bmus_to_csv' do
+    #it "returns a csv file with the list of neurons and their corresponding input pattern" do
+      #@som.epoch
+      #@som.bmus_to_csv('/tmp/bmus_list.csv')
+      #File.read('/tmp/bmus_list.csv').split("\n").should include(
+        #"[000.490,000.110,000.440,000.51],[1, 1, 0, 0]",
+        #"[000.210,000.070,000.630,000.80],[0, 0, 0, 1]",
+        #"[000.490,000.110,000.440,000.51],[1, 0, 0, 0]",
+        #"[000.210,000.070,000.630,000.80],[0, 0, 1, 1]")
+    #end
+  #end
+
   describe 'bmus' do
     it "returns a list of input patterns and their best matching units (BMUs)" do
       @som.epoch
