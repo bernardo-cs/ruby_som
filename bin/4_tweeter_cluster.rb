@@ -22,5 +22,6 @@ som = SOM::SOM.new output_space_size: 5,
 
 som.input_patterns = @bin_matrix.bin_matrix
 som.exec!
+som.create_umatrix
 binding.pry
  

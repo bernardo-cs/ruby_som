@@ -32,6 +32,7 @@ describe UMatrix do
       umatrix.average_distance( Neuron.new([1,2,3,4,5,6,7,8,9]) , [[0,0,0,2,0,0,0,0,0],[0,0,0,2,0,0,0,0,0]] ).round(0).should eql(17)
     end
   end
+
   describe '#neuron_location' do
     it "returns a list of the neurons and theire location in the outputspace" do
       bmus_list = { Neuron.new([1,1]) => [[0,0],[1,1],[0,0]],
@@ -46,6 +47,7 @@ describe UMatrix do
       end
     end
   end
+
   describe '#convert_to_colour' do
     it "converts the averages in a matrix to RGB colours" do
       umatrix = UMatrix.new({}, Array.new(2){Array.new(2)})
