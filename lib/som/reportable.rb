@@ -6,8 +6,8 @@
 
 module SOM
   module Reportable
-    def report
-      File.open(report_file_name, 'w') { |f| @umatrix.bmus_list.each.with_index{ |a,i| f.puts "--- Neuron: #{i}"; a.last.each{ |t| f.puts @bin_matrix.read_tweet(t)} }}
+    def report file_name = report_file_name()
+      File.open(file_name, 'w') { |f| @umatrix.bmus_list.each.with_index{ |a,i| f.puts "--- Neuron: #{i}"; a.last.each{ |t| f.puts @bin_matrix.read_tweet(t)} }}
     end
 
     private
