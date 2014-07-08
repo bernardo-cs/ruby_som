@@ -11,7 +11,7 @@ module SOM
                    radius_type: :circular,
                    force_radius: nil
       @epochs = epochs
-      @umatrix = Matrix.new( output_space_size ){ Array.new(output_space_size) }
+      @umatrix = nil #Matrix.new( output_space_size ){ Array.new(output_space_size) }
       @learning_rate = learning_rate
       @bmus_position = {}
       @input_patterns = Matrix.new(4){ InputPattern.new(4){ rand 0..1 } } 
