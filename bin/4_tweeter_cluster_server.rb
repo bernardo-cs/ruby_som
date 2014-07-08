@@ -20,7 +20,7 @@ som = SOM::SOM.new output_space_size: 5,
  ## Randomly fill the output space
 (25).times{ som.output_space.add(SOM::Neuron.new(@bin_matrix.bin_matrix.first.size){ rand 0..1 }) }
 
-som.input_patterns = @bin_matrix.bin_matrix
+som.input_patterns = @bin_matrix
 som.exec!
 binding.pry
  
