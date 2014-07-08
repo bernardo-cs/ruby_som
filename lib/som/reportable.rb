@@ -16,7 +16,7 @@ module SOM
     end
 
     def report_file_name
-      File.join(report_folder, Time.now.utc.iso8601, '.txt')
+      File.join(report_folder, Time.now.utc.iso8601 + '.txt')
     end
   end
 end
