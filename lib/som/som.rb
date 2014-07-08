@@ -1,8 +1,10 @@
 require_relative 'functions'
+require_relative 'reportable'
 
 module SOM
   class SOM
     include Functions
+
     attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs, :umatrix, :initial_radius, :initial_learning_rate
 
     def initialize learning_rate: 0.6,
