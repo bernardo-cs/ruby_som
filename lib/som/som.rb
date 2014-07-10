@@ -6,19 +6,24 @@ module SOM
     include Functions
     include Reportable
 
-    attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs, :umatrix, :initial_radius, :initial_learning_rate
+    attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs, :umatrix, :initial_radius, :initial_learning_rate , :input_patterns
 
     def initialize learning_rate: 0.6,
                    output_space_size: 4,
                    epochs: 100,
                    radius_type: :circular,
+                   input_patterns: nil,
                    force_radius: nil
       @epochs = epochs
       @umatrix = nil #Matrix.new( output_space_size ){ Array.new(output_space_size) }
       @learning_rate = learning_rate
       @bmus_position = {}
-      @input_patterns = nil #Matrix.new(4){ InputPattern.new(4){ rand 0..1 } } 
-      @output_space = OutputSpace.new( size: output_space_size,radius_type: radius_type )
+      @input_patterns = input_patterns
+      @output_space =  if input_patterns.nil? 
+                         OutputSpace.new( size: output_space_size,radius_type: radius_type )
+                       else 
+                         OutputSpace.new( size: output_space_size,radius_type: radius_type , random_fill: true, vec_size: input_patterns.first.size ) unless input_patterns.nil?
+                       end
       @radius =  force_radius || (measures.max/2.0).round(0) 
       @initial_radius =  @radius
       @initial_learning_rate = @learning_rate

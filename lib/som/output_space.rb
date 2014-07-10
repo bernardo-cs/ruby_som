@@ -19,11 +19,14 @@ module SOM
 
     def initialize size: 10,
                    radius_type: :circular,
+                   random_fill: false,
+                   vec_size: 3,
                    export_path: File.join(Dir.pwd,'images')  
       @grid = Matrix.new(size){ Array.new(size) }
       @export_path = export_path
       @size = size
       @radius_type = radius_type if RADIUS_TYPES.include?(radius_type)
+      random_fill( vec_size ) if random_fill
     end
 
     def find_winning_neuron input_pattern
@@ -48,6 +51,10 @@ module SOM
         str << " ]\n"
       end
       str
+    end
+
+    def random_fill vec_size
+      (size**2).times{ add( SOM::Neuron.new( vec_size ){ rand 0..1 }) }
     end
   end
 end
