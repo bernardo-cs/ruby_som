@@ -17,12 +17,19 @@ describe Reportable do
     @som.create_umatrix
   end
  
+
    describe 'report' do
      it "creates a file with the report of the train performed" do
        file = Tempfile.new('report') 
        @som.report(file.path)
        file.rewind
        File.read(file.path).should eql("--- Neuron: 0\nayrikahnichole xbox\n--- Neuron: 1\nxbox yuda hono\n--- Neuron: 2\ncazorla playing imp\n")
+     end
+     it "yields the file, tweets text trimmed and neuron number" do
+       file = Tempfile.new('report2') 
+       @som.report(file.path){ |file, neuron_number, tweet| file.puts( tweet.to_s + ' ola' )}
+       file.rewind
+       File.read(file.path).should eql("--- Neuron: 0\nayrikahnichole xbox ola\n--- Neuron: 1\nxbox yuda hono ola\n--- Neuron: 2\ncazorla playing imp ola\n")
      end
    end
 end
