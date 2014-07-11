@@ -22,5 +22,11 @@ som = SOM::SOM.new output_space_size: 5,
 
 som.input_patterns = @bin_matrix
 som.exec!
+puts "Generating Report...."
+
+som.report do |f, n, t|
+  f.puts( convert_stemmed_text_to_text( t ))
+end
+
 binding.pry
  

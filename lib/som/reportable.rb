@@ -8,8 +8,8 @@ module SOM
   module Reportable
     ## yields:
     #  f file to write
-    #  t tweet text trimmed
     #  i neuron number
+    #  t tweet text trimmed
     def report file_name = report_file_name(), &block
       File.open(file_name, 'w') { |f| each_bmu_with_index{ |a,i| f.puts "--- Neuron: #{i}"; ip_for_neuron(a){ |t| block_given? ? yield(f,i, @input_patterns.read_tweet(t) ) : f.puts( @input_patterns.read_tweet(t) )} }}
     end

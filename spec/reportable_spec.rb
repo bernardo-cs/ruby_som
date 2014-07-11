@@ -25,6 +25,7 @@ describe Reportable do
        file.rewind
        File.read(file.path).should eql("--- Neuron: 0\nayrikahnichole xbox\n--- Neuron: 1\nxbox yuda hono\n--- Neuron: 2\ncazorla playing imp\n")
      end
+
      it "yields the file, tweets text trimmed and neuron number" do
        file = Tempfile.new('report2') 
        @som.report(file.path){ |file, neuron_number, tweet| file.puts( tweet.to_s + ' ola' )}
