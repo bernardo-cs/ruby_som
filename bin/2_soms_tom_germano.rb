@@ -15,5 +15,3 @@ som = SOM::SOM.new output_space_size: 15,
 som.input_patterns = 1500.times.inject([]){ |arr| arr << Array.new(3){ rand(0..255) }; arr  }
 
 som.exec_and_print_steps!('test_folder_6')
-
-#`say Finished training everything, Sir`

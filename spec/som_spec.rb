@@ -3,7 +3,7 @@ include SOM
 
 describe SOM do
   before :each do
-    @som = SOM::SOM.new learning_rate: 0.6 
+    @som = SOM::SOM.new learning_rate: 0.6
     @som.input_patterns = Matrix.new([[1,1,0,0],[0,0,0,1],[1,0,0,0],[0,0,1,1]])
     [ SOM::Neuron.new( [0.2,0.6,0.5,0.9]  ),
       SOM::Neuron.new( [0.8,0.4,0.7,0.3]  ) ].each{ |neuron| @som.output_space.add( neuron  )  }
@@ -57,7 +57,7 @@ describe SOM do
     it "returns the som temporal const (lambda)" do
       @som.temporal_const_radius.round(0).should eql(144)
     end
-    
+
   end
   describe '#input_patterns_for_wn' do
     it "returns an hash with a list of the input patterns corresponding to each winning neuron" do
@@ -69,18 +69,19 @@ describe SOM do
   end
 
   describe '#update_learning_rate' do
-    it "dcreases the learning_rate based on the number of epochs that run" do
+    it "decreases the learning_rate based on the number of epochs that run" do
       @som = SOM::SOM.new output_space_size: 10, epochs:3
       @som.input_patterns = Matrix.new([[1,1,0,0],[0,0,0,1],[1,0,0,0],[0,0,1,1]])
       [ SOM::Neuron.new( [0.2,0.6,0.5,0.9]  ),
         SOM::Neuron.new( [0.8,0.4,0.7,0.3]  ) ].each{ |neuron| @som.output_space.add( neuron  )  }
-      aux = 1 
-      @som.exec! do |som_state|
-        instance_variable_set("@learning_rate_#{aux}",som_state.learning_rate)
-        aux += 1
+      @som.exec! do |som_state, i|
+        instance_variable_set("@learning_rate_#{i}",som_state.learning_rate)
       end
       @learning_rate_1.should be >= @learning_rate_2
       @learning_rate_2.should be >= @learning_rate_3
+      @learning_rate_1.should be_a Float
+      @learning_rate_2.should be_a Float
+      @som.learning_rate.should be_a Float
     end
   end
 
@@ -90,7 +91,7 @@ describe SOM do
       @som.input_patterns = Matrix.new([[1,1,0,0],[0,0,0,1],[1,0,0,0],[0,0,1,1]])
       [ SOM::Neuron.new( [0.2,0.6,0.5,0.9]  ),
         SOM::Neuron.new( [0.8,0.4,0.7,0.3]  ) ].each{ |neuron| @som.output_space.add( neuron  )  }
-      aux = 1 
+      aux = 1
       @som.exec! do |som_state|
         instance_variable_set("@radius_#{aux}",som_state.radius)
         aux += 1

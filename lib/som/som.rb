@@ -19,12 +19,12 @@ module SOM
       @learning_rate = learning_rate
       @bmus_position = {}
       @input_patterns = input_patterns
-      @output_space =  if input_patterns.nil? 
+      @output_space =  if input_patterns.nil?
                          OutputSpace.new( size: output_space_size,radius_type: radius_type )
-                       else 
+                       else
                          OutputSpace.new( size: output_space_size,radius_type: radius_type , random_fill: true, vec_size: input_patterns.first.size ) unless input_patterns.nil?
                        end
-      @radius =  force_radius || (measures.max/2.0).round(0) 
+      @radius =  force_radius || (measures.max/2.0).round(0)
       @initial_radius =  @radius
       @initial_learning_rate = @learning_rate
     end
@@ -43,9 +43,9 @@ module SOM
       update!(iteration)
     end
 
-    def create_umatrix 
+    def create_umatrix
       @umatrix = UMatrix.new( input_patterns_for_wn, @output_space )
-      @umatrix.create_grid! 
+      @umatrix.create_grid!
     end
 
      def print_umatrix  file_name
@@ -76,38 +76,36 @@ module SOM
     end
 
     def update_bmus_position input_pattern, neuron_position
-     @bmus_position[input_pattern] = neuron_position 
+     @bmus_position[input_pattern] = neuron_position
     end
 
     def exec_and_print_steps! output_folder
-      FileUtils::mkdir_p (File.join(Dir.pwd,'images', output_folder))      
+      FileUtils::mkdir_p (File.join(Dir.pwd,'images', output_folder))
       aux = 0
       exec!  do |som|
-        file_name = "#{output_folder}\/#{aux}_radius_#{som.radius}_learning_rate_#{som.learning_rate.round(3)}" 
+        file_name = "#{output_folder}\/#{aux}_radius_#{som.radius}_learning_rate_#{som.learning_rate.round(3)}"
         som.output_space.print_matrix(5,5, file_name: file_name + '_som.bmp' )
         som.create_umatrix
         print_umatrix( file_name + "_avg_#{@umatrix.grid.avg.round(3)}" + '_umatrix.bmp' )
         aux += 1
       end
     end
-    
+
     def exec! &block
       progress = ProgressBar.create(:title => "Will run #{@epochs} epochs", :starting_at => 0, :total => @epochs, :format => '%a %B %p%% %t')
-      epochs.times{ |iteration| epoch(iteration); progress.increment; yield self if block_given? }
+      epochs.times{ |i| epoch(i + 1); progress.increment; yield( self, i + 1 ) if block_given? }
     end
 
     def update! iteration
       update_radius!(iteration) ; update_learning_rate!(iteration)
     end
 
-    def update_radius! iteration 
-      #@radius = (@radius/2)
-      @radius = exponential_decay( initial_radius, temporal_const_radius, iteration ).round(0) 
+    def update_radius! iteration
+      raise 'Iteration Cannnot be Smaller than Zero' if iteration <= 0
+      @radius = exponential_decay( initial_radius, temporal_const_radius, iteration ).round(0)
     end
 
-    def update_learning_rate! iteration 
-      ## if the second param was epochs, it would converge to a value far from 0
-      #  when the learning rate is equal to 0.6
+    def update_learning_rate! iteration
       @learning_rate = exponential_decay( initial_learning_rate, @epochs/2, iteration )
     end
 
