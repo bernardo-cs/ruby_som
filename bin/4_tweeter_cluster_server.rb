@@ -25,10 +25,7 @@ som.exec!
 som.create_umatrix
 
 puts "Generating Report...."
-som.umatrix.bmus_list.to_a do |pair|
-
-end
-som.report
+som.report( report_neuron_text: true )
 
 binding.pry
 
