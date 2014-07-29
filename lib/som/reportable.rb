@@ -41,7 +41,7 @@ module SOM
     end
 
     def text_report str
-       str.split(' ').uniq.map{ |w| [w, str.split(' ').count( w )] }.sort{ |a| a.last }
+       str.split(' ').uniq.map{ |w| [w, str.split(' ').count( w )] }.sort_by{|k| k.last}.reverse
     end
 
     def each_bmu_with_index &block
