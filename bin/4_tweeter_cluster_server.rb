@@ -4,7 +4,7 @@ require_relative "../../som/lib/som"
 
 include DatasetMapper
 
-@dataset_path = '/home/bersimoes/coding/twitter_data_francisco/decompressed' 
+@dataset_path = '/home/bersimoes/coding/twitter_data_francisco/decompressed'
 @base_file = 'tweets01_aaaa'
 @default_data = :with_stem
 
@@ -25,10 +25,10 @@ som.exec!
 som.create_umatrix
 
 puts "Generating Report...."
-som.report do |f, n, t|
-  f.puts( convert_stemmed_text_to_text( t ))
-  puts "Data written to: #{f.path}"
+som.umatrix.bmus_list.to_a do |pair|
+
 end
+som.report
 
 binding.pry
- 
+

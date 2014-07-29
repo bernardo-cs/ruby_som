@@ -57,8 +57,8 @@ describe SOM do
     it "returns the som temporal const (lambda)" do
       @som.temporal_const_radius.round(0).should eql(144)
     end
-
   end
+
   describe '#input_patterns_for_wn' do
     it "returns an hash with a list of the input patterns corresponding to each winning neuron" do
       @som.epoch
