@@ -14,3 +14,8 @@ gem "ruby-progressbar"
 gem "imageruby"
 gem "imageruby-bmp"
 
+## To be removed
+gem 'whatlanguage'
+gem 'twitter'
+gem 'ruby-stemmer'
+
