@@ -3,7 +3,9 @@ require_relative "../../dataset_mapper/lib/dataset_mapper"
 require_relative "../../data_parser/lib/data_parser/bin_matrix.rb"
 require_relative "../../som/lib/som"
 
-social_network = MiniTwitter::SocialNetwork.unmarshal_latest!()
+social_network = MiniTwitter::SocialNetwork.new
+social_network = social_network.unmarshal_latest!
+
 puts 'Social Network in Usage Info', social_network.to_s
 
 @csv_matrix_file = Tempfile.new('csv_matrix')

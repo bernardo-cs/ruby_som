@@ -1,6 +1,7 @@
 *.bmp
 tags
 /images
+/storage
 # Created by http://www.gitignore.io
 
 ### OSX ###
