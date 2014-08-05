@@ -14,7 +14,7 @@ puts inspect_dataset_stats
 @csv_matrix_file = Tempfile.new('csv_matrix')
 @bin_matrix = BinMatrix.new( @csv_matrix_file.path, tweets_in_selected_words.uniq, 0)
 
-som = SOM::SOM.new output_space_size: 5,
+som = SOM::SOM.new output_space_size: 5
 
  ## Randomly fill the output space
 (25).times{ som.output_space.add(SOM::Neuron.new(@bin_matrix.bin_matrix.first.size){ rand 0..1 }) }
