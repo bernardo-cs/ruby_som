@@ -1,0 +1,134 @@
+--- Neuron: 0
+documentari		1
+watch		1
+order		1
+mac		1
+youtub		1
+restrict		1
+devic		1
+idea		1
+idea devic restrict youtub mac order watch documentari
+--- Neuron: 1
+hypem		1
+remix		1
+grim		1
+rainer		1
+fal		1
+break		1
+coast		1
+golden		1
+love		1
+love golden coast break fal rainer grim remix hypem
+--- Neuron: 2
+munk		1
+west		1
+lanadelrey		1
+hypem		1
+remix		1
+coast		1
+love		1
+love coast remix hypem lanadelrey west munk
+--- Neuron: 3
+love		3
+hypem		3
+griswold		1
+tom		1
+beliz		1
+wayward		1
+misch		1
+memori		1
+love hypem wayward beliz
+love hypem griswold
+love hypem tom misch memori
+--- Neuron: 4
+hypem		1
+fal		1
+break		1
+coast		1
+golden		1
+love		1
+love golden coast break fal hypem
+--- Neuron: 5
+drift		1
+eiesland		1
+nate		1
+hypem		1
+love		1
+love hypem nate eiesland drift
+--- Neuron: 6
+sexo		1
+mai		1
+mas		1
+cinzento		1
+sombra		1
+tipo		1
+tipo sombra cinzento mas mai sexo
+--- Neuron: 7
+elephant		1
+gecko		1
+helden		1
+oliv		1
+hypem		1
+remix		1
+love		1
+love remix hypem oliv helden gecko elephant
+--- Neuron: 8
+father		1
+heaven		1
+boniv		1
+hypem		1
+love		1
+love hypem boniv heaven father
+--- Neuron: 9
+year		1
+fault		1
+segment		1
+segment fault year
+--- Neuron: 10
+efortl		1
+debug		1
+duck		1
+ruber		1
+upgrad		1
+mac		1
+mac upgrad ruber duck debug efortl
+--- Neuron: 11
+badg		1
+survey		1
+complet		1
+codebit		1
+codebit complet survey badg
+--- Neuron: 12
+codebit		2
+badg		2
+friend		1
+nescaf		1
+sapo		1
+loja		1
+dolc		1
+gusto		1
+codebit badg loja sapo
+codebit badg friend nescaf dolc gusto
+--- Neuron: 13
+bananamarket		1
+phone		1
+banana		1
+bought		1
+bought banana phone bananamarket
+--- Neuron: 14
+level		1
+badg		1
+codebit		1
+codebit badg level
+--- Neuron: 15
+cofe		1
+cod		1
+ndg		1
+codebit		1
+codebit ndg cod cofe
+--- Neuron: 16
+microsoft		1
+friend		1
+badg		1
+codebit		1
+codebit badg friend microsoft

@@ -1,0 +1,189 @@
+--- Neuron: 0
+loureiro		1
+hapyday		1
+curi		1
+homemad		1
+homemad curi hapyday loureiro
+--- Neuron: 1
+econ		1
+chang		1
+wind		1
+econom		1
+fele		1
+europ		1
+europ fele econom wind chang econ
+--- Neuron: 2
+ofici		1
+bomba		1
+cash		1
+spiti		1
+video		1
+check		1
+check video spiti cash bomba ofici
+--- Neuron: 3
+chile		1
+valparaiso		1
+style		1
+ornat		1
+coloni		1
+mix		1
+architectur		1
+art		1
+bela		1
+bela art architectur mix coloni ornat style valparaiso chile
+--- Neuron: 4
+ano		1
+ltimo		1
+nest		1
+cruzou		1
+vida		1
+sua		1
+ria		1
+hist		1
+president		1
+noso		1
+vela		1
+sopramo		1
+hoje		1
+hoje sopramo vela noso president hist ria sua vida cruzou nest ltimo ano
+--- Neuron: 5
+sempr		1
+estranho		1
+mai		1
+anuncio		1
+anuncio mai estranho sempr
+--- Neuron: 6
+ismothrun		1
+great		1
+walk		1
+complet		1
+fele		1
+fele complet walk great ismothrun
+--- Neuron: 7
+adirectornevaslep		1
+world		1
+show		1
+wait		1
+fal		1
+premier		1
+readi		1
+film		1
+americanf		1
+progr		1
+lot		1
+lot progr americanf film readi premier fal wait show world adirectornevaslep
+--- Neuron: 8
+park		1
+comun		1
+northvil		1
+seat		1
+paseng		1
+yoda		1
+yoda paseng seat northvil comun park
+--- Neuron: 9
+tira		1
+rock		1
+tone		1
+shot		1
+noit		1
+noit shot tone rock tira
+--- Neuron: 10
+sceneri		1
+awesom		1
+cloud		1
+scater		1
+pensylvania		1
+hil		1
+love		1
+love hil pensylvania scater cloud awesom sceneri
+--- Neuron: 11
+yelp		1
+lavand		1
+laundri		1
+fold		1
+amp		1
+wash		1
+drop		1
+drop wash amp fold laundri lavand yelp
+--- Neuron: 12
+part		1
+maior		1
+programa		1
+modela		1
+softwar		1
+design		1
+forma		1
+ter		1
+devem		1
+candidato		1
+candidato devem ter forma design softwar modela programa maior part
+--- Neuron: 13
+recreat		1
+lake		1
+island		1
+suit		1
+bath		1
+board		1
+bike		1
+boat		1
+bring		1
+peopl		1
+place		1
+great		1
+great place peopl bring boat bike board bath suit island lake recreat
+--- Neuron: 14
+garden		1
+botan		1
+botanicalgarden		1
+brazil		1
+curitiba		1
+patch		1
+pansi		1
+partridg		1
+lege		1
+red		1
+red lege partridg pansi patch curitiba brazil botanicalgarden botan garden
+--- Neuron: 15
+casa		1
+sol		1
+deix		1
+quan		1
+gos		1
+teu		1
+pasa		1
+pasa teu gos quan deix sol casa
+--- Neuron: 16
+hahahahaha		1
+lyric		1
+mikeceno		1
+rape		1
+fish		1
+tuna		1
+make		1
+dad		1
+dad make tuna fish rape mikeceno lyric hahahahaha
+--- Neuron: 17
+peso		1
+exc		1
+dolar		1
+american		1
+zero		1
+chile		1
+chile zero american dolar exc peso
+--- Neuron: 18
+apstor		1
+apl		1
+nedbank		1
+gue		1
+unlockambit		1
+love		1
+love unlockambit gue nedbank apl apstor
+--- Neuron: 19
+hypem		1
+remix		1
+elephant		1
+gecko		1
+helden		1
+oliv		1
+love		1
+love oliv helden gecko elephant remix hypem
