@@ -8,12 +8,17 @@ social_network = social_network.unmarshal_latest!
 
 puts 'Social Network in Usage Info', social_network.to_s
 
+## Save tweets text state
+tweets_trimmed_text = social_network.all_tweets_trimmed_text[1..5000]
+tweets_text = social_network.all_tweets_text[1..5000]
+
 @csv_matrix_file = Tempfile.new('csv_matrix')
-@bin_matrix = BinMatrix.new( @csv_matrix_file.path, social_network.all_tweets_trimmed_text.sample( 5000 ), 0)
+#@bin_matrix = BinMatrix.new( @csv_matrix_file.path, social_network.all_tweets_trimmed_text.sample( 5000 ), 0)
+@bin_matrix = BinMatrix.new( @csv_matrix_file.path, tweets_trimmed_text, 0)
 
 som = SOM::SOM.new output_space_size: 5
 
- ## Randomly fill the output space
+## Randomly fill the output space
 (25).times{ som.output_space.add(SOM::Neuron.new(@bin_matrix.bin_matrix.first.size){ rand 0..1 }) }
 
 som.input_patterns = @bin_matrix
@@ -22,3 +27,5 @@ som.create_umatrix
 
 puts "Generating Report...."
 som.report( report_neuron_text: true )
+
+binding.pry
