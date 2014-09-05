@@ -1,0 +1,1675 @@
+--- Neuron: 0
+twet		5
+bait		1
+mroslet		1
+ofer		1
+favorit		1
+bilbao		1
+athlet		1
+control		1
+bal		1
+magic		1
+alcantara		1
+tiago		1
+youtub		1
+video		1
+colour		1
+lave		1
+danielesophi		1
+yeah		1
+pictur		1
+der		1
+paigon		1
+unknown		1
+onit		1
+wete		1
+custosdivini		1
+strap		1
+bang		1
+twiter		1
+guy		1
+man		1
+link		1
+hamishty		1
+post		1
+check		1
+emchadwick		1
+perfect		1
+omg		1
+ekivokada		1
+estar		1
+espero		1
+manuel		1
+jose		1
+algo		1
+pasao		1
+imaginao		1
+genesi		1
+visto		1
+pasado		1
+tebiaroch		1
+tebiaroch pasado visto twet imaginao pasao algo jose manuel espero estar ekivokada
+twet omg perfect emchadwick
+twet check post hamishty link
+twet man guy twiter bang strap bait wete onit unknown paigon der
+twet pictur yeah danielesophi lave colour
+video youtub tiago alcantara magic bal control athlet bilbao
+favorit ofer mroslet custosdivini genesi
+--- Neuron: 1
+amp		9
+vote		2
+make		2
+midler		1
+fre		1
+fight		1
+team		1
+jesus		1
+indiviuali		1
+father		1
+speak		1
+spend		1
+holi		1
+holiday		1
+relationship		1
+wait		1
+today		1
+god		1
+time		1
+day		1
+spent		1
+buli		1
+locker		1
+boy		1
+great		1
+bete		1
+kcgibon		1
+file		1
+lock		1
+move		1
+bgt		1
+life		1
+guilt		1
+bigotri		1
+gred		1
+cynic		1
+rand		1
+ayn		1
+dream		1
+base		1
+ideal		1
+intelig		1
+ration		1
+american		1
+artist		1
+favorit		1
+britain		1
+tune		1
+gay		1
+ilicksmylip		1
+hear		1
+night		1
+down		1
+henderson		1
+carol		1
+suarez		1
+sign		1
+dalglish		1
+keni		1
+condemn		1
+miror		1
+funi		1
+liam		1
+find		1
+silver		1
+stel		1
+solid		1
+qualiti		1
+premium		1
+type		1
+coper		1
+mini		1
+pad		1
+rotor		1
+brake		1
+rear		1
+slote		1
+front		1
+made		1
+vilian		1
+treat		1
+mad		1
+didnt		1
+mind		1
+supos		1
+blow		1
+wrong		1
+promis		1
+spam		1
+wori		1
+dont		1
+dms		1
+check		1
+coastguard		1
+bieberif		1
+hope		1
+megan		1
+bday		1
+hapi		1
+livelovejelena		1
+livelovejelena hapi bday megan hope bieberif amp check dms dont wori spam promis
+amp wrong blow supos mind didnt mad treat vilian
+amp made front slote rear brake rotor pad mini coper type premium qualiti solid stel silver
+amp find liam funi miror condemn keni dalglish sign suarez carol henderson down
+amp night hear ilicksmylip gay tune vote favorit artist
+amp american ration intelig ideal base dream ayn rand cynic gred bigotri
+amp guilt life make move lock file kcgibon bete midler boy locker buli spent
+amp day time god make today wait relationship holiday holi spend speak father indiviuali jesus
+amp team fight fre vote great bgt britain coastguard
+--- Neuron: 2
+day		4
+apar		2
+case		2
+eco		1
+hit		1
+manag		1
+morn		1
+cheap		1
+aqcs		1
+gdi		1
+blue		1
+speaker		1
+terain		1
+ruge		1
+extrem		1
+face		1
+digit		1
+grace		1
+price		1
+buy		1
+robi		1
+christoph		1
+autumn		1
+dvd		1
+abc		1
+poh		1
+wini		1
+adventur		1
+disney		1
+learn		1
+pasan		1
+cloaca		1
+ud		1
+ciego		1
+pozo		1
+cuando		1
+perelman		1
+superzapa		1
+para		1
+close		1
+lock		1
+voltag		1
+razer		1
+michael		1
+trial		1
+staford		1
+tori		1
+juror		1
+world		1
+dtn		1
+teth		1
+tunez		1
+big		1
+dayz		1
+sophokonk		1
+taylor		1
+alow		1
+hurt		1
+fuckbrac		1
+leav		1
+danieldighton		1
+danieldighton leav day apar alow taylor
+day sophokonk dayz big tunez
+case dtn world juror tori staford trial michael
+apar razer voltag lock close
+para superzapa perelman cuando pozo ciego ud cloaca pasan
+day learn disney adventur wini poh abc dvd autumn christoph robi
+case buy price grace digit eco extrem ruge terain speaker blue gdi aqcs cheap
+day morn manag hit face teth hurt fuckbrac
+--- Neuron: 3
+tho		3
+hair		2
+hot		2
+justin		2
+chainz		1
+legit		1
+truefan		1
+col		1
+wrightlight		1
+charliepn		1
+anouk		1
+franci		1
+dianehoegen		1
+anoukloijen		1
+royheid		1
+ryameo		1
+tanktop		1
+produc		1
+mikewilmadeit		1
+beat		1
+lie		1
+drake		1
+anamainardi		1
+minut		1
+tantop		1
+bom		1
+lucielovesyou		1
+bcqt		1
+garden		1
+buri		1
+coin		1
+file		1
+jerycan		1
+pot		1
+pension		1
+alwhitefireston		1
+problem		1
+juici		1
+pinki		1
+rodb		1
+thoe		1
+webiemay		1
+conviertelo		1
+pit		1
+bushi		1
+deodor		1
+arm		1
+volumis		1
+spray		1
+acidentali		1
+strike		1
+strength		1
+fauna		1
+flora		1
+corfield		1
+cori		1
+idontnowhi		1
+ski		1
+learn		1
+agua		1
+trime		1
+jls		1
+vickilov		1
+asami		1
+calm		1
+lovepurp		1
+afterthought		1
+refus		1
+pictur		1
+huge		1
+fackin		1
+thumb		1
+yumiesthotchocolatev		1
+galaxi		1
+normal		1
+amylouli		1
+chocol		1
+bombtarou		1
+wrong		1
+qanta		1
+aus		1
+duno		1
+dship		1
+vaca		1
+stick		1
+bring		1
+espncadi		1
+espncadi bring stick vaca
+dship duno aus qanta wrong
+bombtarou
+chocol amylouli normal galaxi yumiesthotchocolatev
+thumb fackin huge pictur
+refus afterthought
+lovepurp calm
+asami
+vickilov jls trime hair
+learn ski idontnowhi
+cori corfield flora fauna strength strike
+hair acidentali spray volumis arm deodor bushi pit
+tho webiemay thoe rodb pinki juici problem alwhitefireston
+pension pot jerycan file coin buri garden bcqt
+tho hot justin tantop
+minut chainz drake lie beat mikewilmadeit produc
+tho hot justin tanktop
+ryameo
+royheid anoukloijen dianehoegen franci anouk
+charliepn wrightlight col truefan legit
+anamainardi bom
+lucielovesyou conviertelo agua
+--- Neuron: 4
+ade		2
+forgot		2
+hame		1
+product		1
+toy		1
+pack		1
+expans		1
+leter		1
+lowercas		1
+phonic		1
+fridg		1
+leapfrog		1
+sayayin		1
+super		1
+featur		1
+kame		1
+espada		1
+sea		1
+verga		1
+dar		1
+voy		1
+leaveitasthat		1
+fan		1
+belieb		1
+preti		1
+unlik		1
+bieber		1
+make		1
+trend		1
+jelieberuk		1
+bro		1
+congrat		1
+statist		1
+degr		1
+coleg		1
+man		1
+black		1
+carlonautentico		1
+track		1
+surpos		1
+withcha		1
+fck		1
+thang		1
+doin		1
+marco		1
+kile		1
+nod		1
+earlier		1
+separ		1
+para		1
+sol		1
+mikewalt		1
+den		1
+guilt		1
+fact		1
+tho		1
+season		1
+bought		1
+omg		1
+gregpalm		1
+gregpalm omg bought season tho fact guilt den
+mikewalt ade para forgot earlier nod kile
+forgot marco doin thang fck withcha surpos track
+ade carlonautentico black man coleg degr statist congrat bro
+jelieberuk trend make bieber unlik preti belieb fan leaveitasthat
+voy dar verga sea espada kame hame super sayayin
+leapfrog fridg phonic lowercas leter expans pack toy product featur separ sol
+--- Neuron: 5
+share		2
+hbe		1
+juhr		1
+lnyhbt		1
+cherok		1
+waren		1
+pale		1
+rusti		1
+mrsbutowski		1
+pronadora		1
+nqi		1
+nanlopez		1
+bestiv		1
+hype		1
+sana		1
+suna		1
+houseonfox		1
+getglu		1
+temptat		1
+hous		1
+usual		1
+weirder		1
+tonight		1
+uncl		1
+yeti		1
+lash		1
+sayar		1
+korean		1
+nicolei		1
+rae		1
+nice		1
+anil		1
+tudo		1
+slap		1
+ijanoskian		1
+bot		1
+latia		1
+suhelaelaiyar		1
+volunt		1
+renzbcut		1
+ino		1
+random		1
+hun		1
+candyd		1
+kindn		1
+kilem		1
+bug		1
+understand		1
+lyfeofkesha		1
+wori		1
+igual		1
+vivim		1
+insid		1
+mistak		1
+gramar		1
+alz		1
+tom		1
+kile		1
+macei		1
+restart		1
+hahah		1
+fail		1
+ilylovesbieb		1
+didnt		1
+girl		1
+chaldean		1
+hyukmin		1
+kis		1
+slopi		1
+mejo		1
+danielebrero		1
+ayeitsjanay		1
+realnigalui		1
+jizlep		1
+space		1
+disabl		1
+park		1
+xia		1
+jay		1
+haha		1
+italian		1
+crust		1
+stufe		1
+peor		1
+atlanta		1
+scscscscscscscscscscscscscscscscscscs		1
+wili		1
+huw		1
+esuta		1
+pabon		1
+naitoharuto		1
+church		1
+men		1
+straight		1
+leonknight		1
+troy		1
+davi		1
+ikuko		1
+princesalix		1
+doublepar		1
+hahahahah		1
+sound		1
+arsean		1
+arsenal		1
+spel		1
+piersmorgan		1
+crumbi		1
+bed		1
+work		1
+iphon		1
+smash		1
+octoberjon		1
+sexwhal		1
+tokyo		1
+enjoy		1
+glad		1
+osaxi		1
+sirenmonb		1
+bethros		1
+romant		1
+abien		1
+acomplish		1
+bem		1
+holywodhino		1
+lmao		1
+undr		1
+lazi		1
+lazi undr lmao
+holywodhino share acomplish
+abien romant
+bethros sirenmonb osaxi glad enjoy
+share tokyo sexwhal octoberjon smash iphon work bed crumbi
+piersmorgan spel arsenal arsean sound hahahahah doublepar
+princesalix
+ikuko
+davi troy leonknight straight men church
+naitoharuto pabon esuta
+huw wili scscscscscscscscscscscscscscscscscscs
+atlanta peor stufe crust italian haha
+jay xia
+park disabl space jizlep
+realnigalui ayeitsjanay
+danielebrero mejo
+slopi kis hyukmin
+chaldean girl
+didnt ilylovesbieb fail hahah
+restart macei
+kile tom alz gramar mistak insid
+vivim igual
+wori lyfeofkesha understand bug
+kilem kindn
+candyd hun random ino
+renzbcut volunt
+suhelaelaiyar
+latia bot
+ijanoskian slap hbe anil
+nice rae nicolei
+korean sayar lash yeti uncl
+tonight weirder usual
+hous temptat getglu houseonfox
+suna sana
+hype bestiv
+nanlopez
+nqi
+pronadora mrsbutowski
+rusti pale waren cherok lnyhbt
+juhr tudo bem
+--- Neuron: 6
+tomorow		2
+expect		1
+nother		1
+pretykiyx		1
+gota		1
+toungu		1
+bit		1
+neva		1
+aint		1
+den		1
+scare		1
+violent		1
+ahaha		1
+deviolet		1
+mum		1
+cover		1
+front		1
+fotbaln		1
+sale		1
+mhm		1
+folk		1
+remind		1
+becausethepostalsystemismag		1
+post		1
+flat		1
+thetalkinglama		1
+tire		1
+lerda		1
+senha		1
+sua		1
+nada		1
+tindi		1
+falando		1
+todanegrinet		1
+bay		1
+penen		1
+geh		1
+ich		1
+fabien		1
+cok		1
+fruit		1
+want		1
+cdfu		1
+twitbok		1
+tyrah		1
+exit		1
+coldplay		1
+suport		1
+stockdal		1
+stockdal suport coldplay exit
+tyrah twitbok cdfu want fruit cok
+fabien ich geh penen bay
+todanegrinet falando tindi nada sua senha lerda
+tomorow thetalkinglama expect post becausethepostalsystemismag
+tomorow remind folk mhm sale fotbaln front cover
+mum deviolet ahaha violent scare
+den aint neva bit toungu
+gota pretykiyx nother flat tire
+--- Neuron: 7
+love		8
+folk		1
+literali		1
+song		1
+shawnavaleria		1
+slep		1
+fel		1
+bad		1
+hehe		1
+thousand		1
+sabinadam		1
+twet		1
+jamiet		1
+lost		1
+think		1
+eleven		1
+quater		1
+heaven		1
+respect		1
+wife		1
+mine		1
+save		1
+shoutingod		1
+repeat		1
+recruit		1
+lax		1
+cuse		1
+nunesmagician		1
+beat		1
+steal		1
+team		1
+glu		1
+anymor		1
+idea		1
+ineleg		1
+phone		1
+talk		1
+peopl		1
+life		1
+natur		1
+eroneousgenius		1
+gorgeous		1
+beauti		1
+pure		1
+til		1
+lotr		1
+weird		1
+sheldonsbitch		1
+sheldonsbitch weird lotr love
+love pure beauti gorgeous eroneousgenius natur
+love life peopl talk phone ineleg idea anymor glu
+love team steal beat nunesmagician cuse lax recruit
+love folk shoutingod save mine wife respect
+love heaven quater eleven think lost jamiet
+twet love sabinadam thousand hehe
+love bad fel slep shawnavaleria song literali repeat til
+--- Neuron: 8
+fel		3
+live		2
+direct		2
+die		2
+amaz		2
+heart		1
+trophi		1
+adict		1
+voic		1
+nyofici		1
+boy		1
+bulshit		1
+true		1
+desireren		1
+hand		1
+type		1
+wal		1
+remain		1
+dog		1
+draw		1
+elieintheski		1
+save		1
+fav		1
+efi		1
+atm		1
+cuti		1
+quinbrit		1
+hate		1
+cok		1
+rest		1
+lade		1
+alison		1
+forward		1
+guilti		1
+youstud		1
+kil		1
+isu		1
+pervieous		1
+respons		1
+contact		1
+send		1
+plz		1
+ghaderahm		1
+video		1
+music		1
+chanc		1
+debut		1
+broken		1
+boyband		1
+tomlinstersarmi		1
+tomlinstersarmi boyband direct debut live music video
+direct ghaderahm plz send contact respons pervieous isu
+kil fel guilti forward alison lade rest
+cok hate quinbrit cuti die efi fav
+amaz fel elieintheski draw dog remain wal
+type fel hand desireren true bulshit
+amaz boy nyofici voic adict trophi atm
+live die save youstud chanc broken heart
+--- Neuron: 9
+manag		3
+studi		2
+fundrais		1
+legitim		1
+demand		1
+obv		1
+gauravcsaw		1
+jemin		1
+set		1
+partit		1
+configur		1
+media		1
+prestag		1
+blog		1
+configmgr		1
+exam		1
+lorh		1
+tengah		1
+aku		1
+abang		1
+yawn		1
+flag		1
+american		1
+backdrop		1
+shirtslev		1
+role		1
+scutel		1
+seatl		1
+ades		1
+obama		1
+big		1
+hardcoremincov		1
+spew		1
+pilot		1
+milk		1
+drink		1
+perkin		1
+toni		1
+display		1
+ignor		1
+amount		1
+astound		1
+dansden		1
+mouth		1
+tape		1
+duck		1
+lifestyl		1
+mvcin		1
+lmao		1
+absolv		1
+case		1
+count		1
+rainforest		1
+tropic		1
+tropic rainforest count case studi
+lmao mvcin lifestyl duck tape mouth
+dansden astound amount ignor display toni perkin
+drink milk manag spew hardcoremincov
+big obama ades seatl fundrais role shirtslev backdrop american flag yawn
+studi abang aku tengah lorh exam
+manag configmgr blog prestag media configur partit set
+manag jemin gauravcsaw obv demand legitim scutel pilot absolv
+--- Neuron: 10
+sort		2
+hahaha		2
+stew		1
+twetarazi		1
+wit		1
+pot		1
+made		1
+big		1
+adap		1
+usb		1
+fre		1
+eve		1
+env		1
+card		1
+memori		1
+microsdhc		1
+sped		1
+turbo		1
+high		1
+wear		1
+winter		1
+warm		1
+japanes		1
+kigurumi		1
+chonqi		1
+thing		1
+corp		1
+boardin		1
+arc		1
+jean		1
+jesuisunepat		1
+fol		1
+nose		1
+ear		1
+put		1
+supos		1
+lukenewsom		1
+rbaty		1
+waterway		1
+intercoast		1
+west		1
+yeah		1
+rofer		1
+shiz		1
+secret		1
+top		1
+menu		1
+event		1
+jonardius		1
+aous		1
+fun		1
+lezbo		1
+mari		1
+thomasafuckinga		1
+dump		1
+xgeorgier		1
+xgeorgier dump thomasafuckinga mari lezbo fun hahaha
+jonardius event menu top secret shiz
+rofer yeah west intercoast waterway
+rbaty lukenewsom supos put ear nose fol
+jesuisunepat jean arc sort corp
+hahaha thing chonqi kigurumi japanes warm winter wear
+high turbo sped microsdhc memori card env eve fre usb adap
+big made sort pot wit twetarazi boardin aous stew
+--- Neuron: 11
+life		4
+find		3
+real		3
+make		2
+debt		1
+niga		1
+aojcdnsljhfirik		1
+excit		1
+how		1
+lelovesbieb		1
+omg		1
+recip		1
+singl		1
+mark		1
+yep		1
+fandw		1
+pinkparsleyblog		1
+joaneatswel		1
+sasyinthekitch		1
+underst		1
+casual		1
+fandom		1
+refer		1
+convers		1
+itsblondiebtc		1
+genius		1
+dead		1
+rais		1
+damn		1
+paid		1
+prais		1
+mysaviorsal		1
+usership		1
+major		1
+atitud		1
+cofescript		1
+bef		1
+rush		1
+turn		1
+ryanflor		1
+typemod		1
+fuck		1
+hype		1
+wekend		1
+peoria		1
+glendal		1
+everytim		1
+kmt		1
+concert		1
+sayibg		1
+relationship		1
+long		1
+mum		1
+care		1
+fine		1
+abz		1
+elmo		1
+knezer		1
+knezer elmo abz fine care mum find life sayibg concert kmt
+find everytim glendal peoria wekend hype fuck typemod
+ryanflor turn real bef cofescript atitud major usership
+life mysaviorsal prais paid debt rais dead
+life genius make real convers refer fandom casual underst
+make sasyinthekitch joaneatswel pinkparsleyblog fandw yep mark singl recip
+omg life lelovesbieb how excit aojcdnsljhfirik
+find niga damn real itsblondiebtc rush relationship long
+--- Neuron: 12
+peopl		4
+hate		4
+watch		2
+omfg		2
+midl		2
+hari		2
+twitchyteam		1
+schol		1
+girl		1
+sdlkfjasdklfja		1
+waist		1
+worship		1
+hand		1
+loui		1
+sugarscap		1
+cute		1
+wtf		1
+shote		1
+turnpik		1
+wake		1
+nigha		1
+kash		1
+zayn		1
+youtub		1
+georgeadonay		1
+coment		1
+trayvon		1
+bradfordbadmi		1
+wayn		1
+death		1
+shine		1
+nra		1
+wing		1
+left		1
+upset		1
+delet		1
+acount		1
+twete		1
+horan		1
+vana		1
+sucker		1
+play		1
+minut		1
+atach		1
+afrocentr		1
+vid		1
+genius		1
+bloke		1
+pilkington		1
+karl		1
+constant		1
+moan		1
+iston		1
+despis		1
+dan		1
+dan despis peopl moan constant karl pilkington bloke genius
+hate afrocentr atach minut play sucker
+peopl vana horan twete acount delet upset
+hate left wing nra shine death wayn twitchyteam trayvon
+watch georgeadonay omfg midl
+peopl midl kash nigha wake turnpik shote wtf
+omfg cute sugarscap loui hand hari waist sdlkfjasdklfja
+hate girl hari schol bradfordbadmi worship zayn
+peopl watch hate youtub coment vid iston
+--- Neuron: 13
+lol		7
+involv		2
+acount		1
+start		1
+wiv		1
+film		1
+horor		1
+joker		1
+jazyd		1
+scare		1
+dont		1
+megahorni		1
+sexyth		1
+consciousn		1
+stream		1
+faulknerian		1
+form		1
+rare		1
+tradingpoint		1
+tonight		1
+twiter		1
+xananomarx		1
+caught		1
+photograph		1
+schol		1
+idk		1
+mileyfan		1
+bustin		1
+pictur		1
+person		1
+quand		1
+sarahcancun		1
+anus		1
+mat		1
+pound		1
+hord		1
+meant		1
+ninja		1
+dublejord		1
+hot		1
+shankney		1
+hahaha		1
+birthday		1
+night		1
+nice		1
+kik		1
+help		1
+yesterday		1
+coki		1
+made		1
+luckili		1
+chocol		1
+hertschick		1
+hope		1
+hapi		1
+hapi hope hertschick chocol luckili made coki yesterday help lol nice night birthday
+hahaha lol shankney hot dublejord involv meant hord pound mat anus
+lol sarahcancun quand
+lol person pictur acount mileyfan idk schol photograph caught xananomarx
+lol twiter tonight tradingpoint rare form faulknerian stream consciousn
+lol sexyth megahorni
+dont lol involv scare jazyd joker horor film wiv start bustin ninja kik
+--- Neuron: 14
+team		2
+tip		1
+trape		1
+flock		1
+feather		1
+bird		1
+sangyeh		1
+buli		1
+suport		1
+invit		1
+nikeofici		1
+friend		1
+yeah		1
+amp		1
+badg		1
+pure		1
+provid		1
+brush		1
+high		1
+omega		1
+shave		1
+badger		1
+existenti		1
+eleg		1
+silver		1
+qualiti		1
+sir		1
+move		1
+bad		1
+posibl		1
+thing		1
+worst		1
+player		1
+cloudyajhd		1
+masivetek		1
+boycot		1
+caz		1
+cros		1
+wana		1
+dnt		1
+pasion		1
+welfar		1
+anim		1
+anip		1
+purgatori		1
+team anip anim welfar pasion dnt wana cros caz boycot
+team masivetek cloudyajhd player worst thing posibl bad move sir
+qualiti silver eleg tip badger shave omega high brush provid pure badg
+amp yeah friend nikeofici invit
+suport buli sangyeh bird feather flock trape existenti purgatori
+--- Neuron: 15
+time		4
+trscop		1
+veanico		1
+scare		1
+bout		1
+fight		1
+kyle		1
+join		1
+theyshoutshan		1
+news		1
+fox		1
+pelosi		1
+nanci		1
+broke		1
+meter		1
+dang		1
+ran		1
+began		1
+speak		1
+profit		1
+teach		1
+gota		1
+twiter		1
+guy		1
+tomorow		1
+makro		1
+blow		1
+crew		1
+cultur		1
+pop		1
+influenc		1
+baker		1
+atractiven		1
+atractiven baker influenc pop cultur time
+time blow makro tomorow guy twiter gota teach profit
+speak began trscop dang meter broke nanci pelosi fox news
+time theyshoutshan join kyle
+time fight bout scare veanico ran crew
+--- Neuron: 16
+emili		2
+becira		1
+twig		1
+ryan		1
+notgronkowski		1
+check		1
+comfi		1
+danydefin		1
+damn		1
+buck		1
+devic		1
+activ		1
+verizon		1
+comcastbil		1
+give		1
+pierc		1
+roke		1
+wekend		1
+bangun		1
+antoninamoysh		1
+novianti		1
+elen		1
+julitaimoudh		1
+amabel		1
+voni		1
+clas		1
+train		1
+pistol		1
+sex		1
+deltic		1
+captain		1
+zanland		1
+bij		1
+dus		1
+oke		1
+reg		1
+ebay		1
+askebay		1
+email		1
+pls		1
+absolut		1
+spedynatedog		1
+hadamo		1
+slep		1
+rom		1
+tidi		1
+aleksjoshto		1
+teamdani		1
+saturday		1
+aleksjosh		1
+rebeckyhil		1
+convers		1
+untag		1
+milyanx		1
+wisker		1
+unfolow		1
+eat		1
+jealous		1
+cake		1
+hungergam		1
+friend		1
+birthday		1
+spede		1
+ticket		1
+vpigreni		1
+belfastlough		1
+babi		1
+boat		1
+jump		1
+woman		1
+ofend		1
+person		1
+bin		1
+dust		1
+jesicasoncrack		1
+jesicasoncrack dust bin person ofend
+woman jump boat babi belfastlough
+vpigreni ticket spede
+birthday friend hungergam cake jealous eat
+emili wisker milyanx untag convers
+rebeckyhil aleksjosh saturday teamdani aleksjoshto
+tidi rom slep hadamo
+spedynatedog absolut pls email askebay ebay reg
+oke dus bij zanland
+captain deltic sex pistol train clas
+voni amabel julitaimoudh elen novianti becira bangun
+wekend roke pierc
+give comcastbil verizon activ devic buck
+damn danydefin comfi
+check emili notgronkowski ryan twig antoninamoysh unfolow
+--- Neuron: 17
+god		6
+love		2
+ber		1
+bryanstar		1
+sbas		1
+welovechrismiw		1
+excit		1
+man		1
+fuck		1
+cute		1
+fit		1
+advic		1
+parent		1
+steal		1
+ihaileyjo		1
+livid		1
+feck		1
+tonight		1
+job		1
+rhodri		1
+watch		1
+dul		1
+rule		1
+wek		1
+trol		1
+obses		1
+gut		1
+dude		1
+bionic		1
+ear		1
+thumb		1
+ilinoi		1
+what		1
+stopin		1
+budi		1
+quin		1
+pat		1
+hate		1
+tomoro		1
+cal		1
+cale		1
+damn		1
+coutur		1
+close		1
+imeanwhut		1
+gliter		1
+smoke		1
+puf		1
+pof		1
+kise		1
+blow		1
+win		1
+bed		1
+night		1
+swhpoepohpoehg		1
+love night bed god blow kise pof puf smoke gliter imeanwhut
+love god close coutur damn cale cal tomoro hate pat quin budi stopin what ilinoi
+god thumb ear bionic ber gut obses trol wek rule dul
+god watch rhodri job tonight feck livid
+god ihaileyjo steal parent advic fit cute
+fuck man god excit welovechrismiw sbas bryanstar dude win swhpoepohpoehg
+--- Neuron: 18
+finish		2
+cancer		1
+stylus		1
+sketch		1
+handhelditem		1
+includ		1
+packag		1
+protector		1
+scren		1
+mate		1
+glare		1
+fingerprint		1
+anti		1
+lumia		1
+nokia		1
+madr		1
+mujer		1
+una		1
+vien		1
+lindo		1
+almazan		1
+whore		1
+shoe		1
+pen		1
+cud		1
+earli		1
+born		1
+iamfancysanci		1
+suchalayd		1
+jaempresnev		1
+damn		1
+fingerscros		1
+view		1
+lot		1
+like		1
+oce		1
+sho		1
+omgomgomgomg		1
+basket		1
+flower		1
+diy		1
+thanksmom		1
+gift		1
+perfect		1
+search		1
+sunday		1
+mothersday		1
+mothersday sunday search perfect gift thanksmom diy flower basket
+omgomgomgomg finish oce like lot view fingerscros
+damn jaempresnev suchalayd iamfancysanci born earli cud cancer shoe whore
+almazan lindo vien una mujer madr
+finish nokia lumia anti fingerprint glare mate scren protector packag includ handhelditem sketch stylus pen sho
+--- Neuron: 19
+god		2
+mad		2
+wen		2
+dey		2
+kno		1
+hoe		1
+dumb		1
+cale		1
+fuck		1
+hea		1
+dafuckouta		1
+whoeva		1
+give		1
+talk		1
+femal		1
+fuckin		1
+niga		1
+otha		1
+bout		1
+uon		1
+ion		1
+wit		1
+blockag		1
+cobweb		1
+awar		1
+empir		1
+roman		1
+celebr		1
+nectar		1
+drink		1
+sugest		1
+trend		1
+monday		1
+home		1
+shit		1
+promo		1
+back		1
+gorgeouslybad		1
+sunday		1
+stif		1
+god sunday gorgeouslybad back promo shit home monday
+god trend sugest drink nectar celebr roman empir awar cobweb blockag
+mad ion kno bout otha niga wen femal talk dey whoeva dafuckouta hea
+fuck mad wen dey cale dumb hoe uon give fuckin wit stif
+--- Neuron: 20
+talk		5
+met		1
+creat		1
+level		1
+lotion		1
+aplic		1
+techniqu		1
+special		1
+godn		1
+misapriltoyou		1
+hope		1
+sport		1
+johnand		1
+hear		1
+clvlndk		1
+android		1
+preview		1
+prostudioap		1
+tech		1
+ifwt		1
+thur		1
+dot		1
+height		1
+dad		1
+yeahitsilona		1
+hour		1
+skype		1
+ericthomasbtc		1
+bad		1
+sort		1
+mum		1
+crip		1
+buy		1
+imagin		1
+bare		1
+rememb		1
+monkey		1
+drink		1
+shit		1
+chocol		1
+morn		1
+show		1
+today		1
+watch		1
+woahziam		1
+monday		1
+monday woahziam watch today show morn
+chocol shit drink monkey rememb bare imagin buy crip
+mum sort bad talk skype hour yeahitsilona dad met dot thur
+talk ifwt tech prostudioap preview android
+talk clvlndk hear johnand sport
+hope talk misapriltoyou godn special techniqu aplic lotion
+talk level creat height ericthomasbtc
+--- Neuron: 21
+laugh		5
+stop		3
+learn		2
+die		1
+spanish		1
+jajaja		1
+miamaz		1
+cal		1
+danc		1
+janoskian		1
+grandad		1
+luci		1
+april		1
+lucinda		1
+show		1
+back		1
+peopl		1
+omg		1
+lishahepburn		1
+rock		1
+imag		1
+phoneanim		1
+phone		1
+price		1
+fisher		1
+toy		1
+amp		1
+besfrend		1
+yur		1
+fight		1
+wantchu		1
+nastyasbr		1
+dont		1
+cher		1
+alba		1
+downheart		1
+paulin		1
+daili		1
+theonewhowantstokidnapnathanandmaryhim		1
+life		1
+life learn daili stop downheart laugh cher
+dont stop nastyasbr wantchu fight yur besfrend
+amp learn laugh toy fisher price phone phoneanim imag
+laugh die lishahepburn
+omg peopl back show stop laugh lucinda april luci grandad janoskian danc
+laugh cal miamaz jajaja spanish rock alba paulin theonewhowantstokidnapnathanandmaryhim
+--- Neuron: 22
+folow		6
+back		3
+monday		1
+gain		1
+catnip		1
+simpli		1
+belxbel		1
+korey		1
+sodmg		1
+long		1
+bhad		1
+eri		1
+newest		1
+notgetinganybet		1
+mrs		1
+complain		1
+sarahloftynm		1
+day		1
+ofic		1
+return		1
+great		1
+thx		1
+picklevalentin		1
+teamfolowback		1
+marinemalik		1
+instant		1
+cavil		1
+henri		1
+grey		1
+mistermercuri		1
+enjoy		1
+hope		1
+hasapusytast		1
+interest		1
+bargain		1
+litr		1
+juic		1
+fish		1
+speciali		1
+sele		1
+dmyworld		1
+guis		1
+made		1
+amaz		1
+kayn		1
+lego		1
+hey		1
+nvsoficialarmi		1
+nvsoficialarmi hey folow kayn amaz
+made guis dmyworld sele speciali fish juic litr bargain interest hasapusytast
+hope enjoy folow mistermercuri grey henri cavil
+back folow marinemalik
+back monday folow picklevalentin thx great return ofic
+day back sarahloftynm complain mrs notgetinganybet
+folow newest eri bhad
+folow long sodmg korey belxbel simpli catnip gain teamfolowback instant lego
+--- Neuron: 23
+campur		1
+ikut		1
+gak		1
+percaya		1
+tetep		1
+yon		1
+bodohnya		1
+dia		1
+ngeblock		1
+untuk		1
+seseorang		1
+mengijinkan		1
+tau		1
+juga		1
+gue		1
+roleplayerclub		1
+simpl		1
+jail		1
+goin		1
+thought		1
+fuc		1
+scari		1
+datschildplay		1
+mistak		1
+cal		1
+rain		1
+drop		1
+mother		1
+ofer		1
+declin		1
+dwizyboy		1
+home		1
+refus		1
+unit		1
+qpr		1
+anticip		1
+mcfc		1
+newglobalbrand		1
+alanfish		1
+turn		1
+sunday		1
+eatsumotherfuckinchicken		1
+wait		1
+simonscharlot		1
+slag		1
+mandem		1
+hil		1
+nando		1
+safe		1
+floydi		1
+bengelew		1
+bengelew floydi safe nando hil mandem slag simonscharlot wait eatsumotherfuckinchicken
+sunday turn alanfish newglobalbrand mcfc anticip qpr unit
+refus home dwizyboy declin ofer mother drop rain
+cal mistak datschildplay scari fuc thought goin jail simpl
+roleplayerclub gue juga tau mengijinkan seseorang untuk ngeblock dia bodohnya yon tetep percaya gak ikut campur
+--- Neuron: 24
+end		2
+nice		2
+schol		2
+highlight		1
+yari		1
+read		1
+bitch		1
+lmao		1
+carer		1
+hoesonmyvick		1
+ladi		1
+quick		1
+bok		1
+high		1
+surpris		1
+friday		1
+scholast		1
+come		1
+gud		1
+thursday		1
+antholilmonst		1
+leo		1
+hey		1
+time		1
+topfashion		1
+car		1
+site		1
+shop		1
+drive		1
+mugshot		1
+fare		1
+wori		1
+dont		1
+dont wori nice mugshot drive shop site car topfashion
+time hey leo antholilmonst thursday gud come end friday surpris
+nice high end schol quick ladi hoesonmyvick carer
+lmao schol bitch read yari scholast bok fare highlight
