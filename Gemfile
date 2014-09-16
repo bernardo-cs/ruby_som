@@ -6,13 +6,13 @@ gem "pry"
 gem "pry-rescue"
 gem "pry-stack_explorer"
 gem "pry-byebug"
-gem "rspec-core"
-gem "rspec"
+gem "rspec-core" , '2.14.8'
 
 ## Production
 gem "ruby-progressbar"
 gem "imageruby"
 gem "imageruby-bmp"
+gem 'ark_tweet_nlp'
 
 ## To be removed
 gem 'whatlanguage'
