@@ -1,6 +1,6 @@
 require_relative "../../mini_twitter/lib/social_network.rb"
 require_relative "../../dataset_mapper/lib/dataset_mapper"
-require_relative "../../data_parser/lib/data_parser/bin_matrix.rb"
+require_relative "../../data_parser/lib/data_parser/tweets_bin_matrix.rb"
 require_relative "../../data_parser/lib/data_parser/string.rb"
 require_relative "../../som/lib/som"
 
@@ -18,7 +18,7 @@ tweets_text = social_network.all_tweets_text
 ## Find all words in the crawwled tweets that ar of type:
 #  N, ^, #, U = > Common noun, proper noun, hashtags, url or email
 tagged_result = ArkTweetNlp::Parser.find_tags( tweets_text.inject(""){ |acum,t| acum + t.gsub("\n",'') + "\n"}[0..-2] )
-wanted_words  = ArkTweetNlp::Parser.get_words_tagged_as( tagged_result, :N, :^, :"#", :U )
+wanted_words  = ArkTweetNlp::Parser.get_words_tagged_as( tagged_result, :N, :^, :"#")
 res = Set.new
 wanted_words.each do |k,v|
   puts "Word type: " + ArkTweetNlp::Parser::TAGSET[k]
@@ -35,15 +35,13 @@ end
 
 ## Merging all the trimmed results will lead to ~= 30% reduction in the SVM size
 puts "All unique: " + res.size.to_s
-binding.pry
 
-@csv_matrix_file = Tempfile.new('csv_matrix')
-@bin_matrix = BinMatrix.new( @csv_matrix_file.path, tweets_trimmed_text, 0)
+@bin_matrix = DataParser::TweetsBinMatrix.new( social_network.all_tweets,  res )
 
 som = SOM::SOM.new output_space_size: 5, epochs: 1
 
 ## Randomly fill the output space
-(25).times{ som.output_space.add(SOM::Neuron.new(@bin_matrix.bin_matrix.first.size){ rand 0..1 }) }
+(25).times{ som.output_space.add(SOM::Neuron.new(@bin_matrix.svm.first.size){ rand 0..1 }) }
 
 som.input_patterns = @bin_matrix
 som.exec!

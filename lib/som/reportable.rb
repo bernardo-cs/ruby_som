@@ -3,7 +3,7 @@
 
 ## @umatrix must be implemented in order to get bmus and input_patterns
 ## @input_patterns must be implemented in order to read the tweets
-#  inputt_patterns must be of type BinMatrix
+#  inputt_patterns must be of type BinMatrix or similar, and must implement read_tweet
 
 module SOM
   module Reportable
@@ -12,12 +12,16 @@ module SOM
     #  i neuron number
     #  t tweet text trimmed
     def report file_name = report_file_name(), report_neuron_text: false, &block
-      File.open(file_name, 'w') do |f|
-        each_bmu_with_index do |a,i|
-          f.puts "--- Neuron: #{i}"
-          f.puts(  neuron_text_report(i) ) if report_neuron_text
-          ip_for_neuron(a){ |t| block_given? ? yield(f,i, @input_patterns.read_tweet(t) ) : f.puts( @input_patterns.read_tweet(t) )}
+      if @input_patterns.class == DataParser::TweetsBinMatrix
+        File.open(file_name, 'w' ) do |f|
+          @umatrix.bmus_list.each.with_index do |pair, index|
+            f.puts " Neuron: #{index}"
+            f.puts(  neuron_text_report(index) ) if report_neuron_text
+            f.puts(pair.last.each.inject(""){ |str,t| str << t.tweet.text << "\n" ;str} )
+          end
         end
+      else
+        default_report( file_name, report_neuron_text, &block )
       end
     end
 
@@ -36,6 +40,15 @@ module SOM
     end
 
     private
+    def default_report
+      File.open(file_name, 'w') do |f|
+        each_bmu_with_index do |a,i|
+          f.puts "--- Neuron: #{i}"
+          f.puts(  neuron_text_report(i) ) if report_neuron_text
+          ip_for_neuron(a){ |t| block_given? ? yield(f,i, @input_patterns.read_tweet(t) ) : f.puts( @input_patterns.read_tweet(t) )}
+        end
+      end
+    end
     def neuron_text ip
       ip.inject(""){ |sum,i| sum << @input_patterns.read_tweet( i ) << " "}
     end
