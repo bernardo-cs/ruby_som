@@ -24,13 +24,10 @@ wanted_words.each do |k,v|
   puts "Word type: " + ArkTweetNlp::Parser::TAGSET[k]
   puts "found: " + v.size.to_s + " words"
   puts "where: " + Set.new( v ).size.to_s + " are unique"
-  ## URLs cannot be trimed, because trimming destroys urls :p
   trimmed_and_unique = Set.new( Set.new( v ).map{ |l| l.trim }.reject{ |n| n.nil? || n == "" })
-  if k != :U
-    puts "when trimed: " + trimmed_and_unique.size.to_s  + " are unique"
-    #trimmed_and_unique.each{ |n| puts n }
-    res.merge trimmed_and_unique
-  end
+  puts "when trimed: " + trimmed_and_unique.size.to_s  + " are unique"
+  #trimmed_and_unique.each{ |n| puts n }
+  res.merge trimmed_and_unique
 end
 
 ## Merging all the trimmed results will lead to ~= 30% reduction in the SVM size
