@@ -39,7 +39,8 @@ som = SOM::SOM.new output_space_size: 10, epochs: 500
 ## Randomly fill the output space
 (100).times{ som.output_space.add(SOM::Neuron.new(@bin_matrix.svm.first.size){ rand 0..1 }) }
 
-som.input_patterns = @bin_matrix
+## Only add input patterns that contain at least one position
+som.input_patterns = @bin_matrix.select{ |i| i.reduce(:+) > 0 }
 som.exec!
 som.create_umatrix
 

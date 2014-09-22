@@ -6,7 +6,7 @@ gem "pry"
 gem "pry-rescue"
 gem "pry-stack_explorer"
 gem "pry-byebug"
-gem "rspec-core" , '2.14.8'
+gem "rspec", '2.99.0'
 
 ## Production
 gem "ruby-progressbar"

@@ -11,15 +11,15 @@ describe Matrix do
      @matrix.each_value do |val|
        @matrix.flat_map{ |a| a }.should include(val)
      end
-   end 
+   end
 
    describe '#full' do
      it "returns true if matrix is full" do
-       @matrix.full?.should be_true
+       @matrix.full?.should be_truthy
      end
      it "returns false if the matrix has nils" do
        @matrix[1][2] = nil
-       @matrix.full?.should be_false
+       @matrix.full?.should be_falsey
      end
    end
 
@@ -49,7 +49,7 @@ describe Matrix do
        @matrix[0][0] = nil
        @matrix.all_values.should eql([2,3,4,5,6,7,8,9])
      end
-     
+
    end
 
    describe '#find_min' do

@@ -1,3 +1,4 @@
+require_relative '../../../data_parser/lib/data_parser/tweets_bin_matrix.rb'
 ## Module used to create reports of the soms
 ## converts arrays to tweets
 
@@ -40,7 +41,7 @@ module SOM
     end
 
     private
-    def default_report
+    def default_report file_name, report_neuron_text, &block
       File.open(file_name, 'w') do |f|
         each_bmu_with_index do |a,i|
           f.puts "--- Neuron: #{i}"
