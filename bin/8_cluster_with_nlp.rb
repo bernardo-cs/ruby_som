@@ -18,18 +18,21 @@ if File.exists? 'tweets_trimmed_text.yaml'
   tweets_trimmed_text = YAML.load(File.read('tweets_trimmed_text.yaml'))
 else
    tweets_trimmed_text = social_network.all_tweets_trimmed_text
+   puts 'Trimmed tweets'
 end
 if File.exists? 'tweets_text.yaml'
   puts 'loaded tweets text'
   tweets_text         = YAML.load(File.read('tweets_text.yaml'))
 else
   tweets_text         = social_network.all_tweets_text
+   puts 'Got all tweets'
 end
 if File.exists? 'tweets_text_tag_ready.yaml'
   puts 'loaded tweets text tag'
   tweets_ready_to_tag = YAML.load(File.read('tweets_text_tag_ready.yaml'))
 else
-  tweets_text.inject(""){ |acum,t| acum + t.gsub("\n",'').gsub("\t", " ") + "\n"}[0..-2]
+  tweets_ready_to_tag = tweets_text.inject(""){ |acum,t| acum + t.gsub("\n",'').gsub("\t", " ") + "\n"}[0..-2]
+   puts 'Found all tags!'
 end
 ## Find all words in the crawwled tweets that ar of type:
 #  N, ^, #, U = > Common noun, proper noun, hashtags, url or email
