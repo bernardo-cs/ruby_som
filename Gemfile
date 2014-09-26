@@ -4,8 +4,8 @@ source "https://rubygems.org"
 ## Development
 gem "pry"
 gem "pry-rescue"
-gem "pry-stack_explorer"
-gem "pry-byebug"
+#gem "pry-stack_explorer"
+#gem "pry-byebug"
 gem "rspec", '2.99.0'
 
 ## Production

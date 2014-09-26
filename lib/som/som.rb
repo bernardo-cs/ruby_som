@@ -82,7 +82,7 @@ module SOM
     def exec_and_print_steps! output_folder
       FileUtils::mkdir_p (File.join(Dir.pwd,'images', output_folder))
       aux = 0
-      exec!  do |som|
+      exec! do |som|
         file_name = "#{output_folder}\/#{aux}_radius_#{som.radius}_learning_rate_#{som.learning_rate.round(3)}"
         som.output_space.print_matrix(5,5, file_name: file_name + '_som.bmp' )
         som.create_umatrix
