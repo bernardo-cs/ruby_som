@@ -12,7 +12,7 @@ gem "rspec", '2.99.0'
 gem "ruby-progressbar"
 gem "imageruby"
 gem "imageruby-bmp"
-gem 'ark_tweet_nlp'
+gem 'ark_tweet_nlp', "0.3.2"
 
 ## To be removed
 gem 'whatlanguage'

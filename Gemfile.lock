@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
-    ark_tweet_nlp (0.3.1)
+    ark_tweet_nlp (0.3.2)
     buftok (0.2.0)
     coderay (1.1.0)
     diff-lcs (1.2.5)
@@ -58,7 +58,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ark_tweet_nlp
+  ark_tweet_nlp (= 0.3.2)
   imageruby
   imageruby-bmp
   pry
