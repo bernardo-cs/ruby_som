@@ -1,3 +1,4 @@
+require_relative './printable.rb'
 module SOM
   class Neuron < Array
     include Printable
@@ -13,7 +14,7 @@ module SOM
       Neuron.new( learn_function(input_pattern, learning_rate) )
     end
     def learn_function input_pattern, learning_rate
-      map{ |x| x*(1-learning_rate) }.zip( input_pattern.map{ |x| x*learning_rate } ).map do |x| 
+      map{ |x| x*(1-learning_rate) }.zip( input_pattern.map{ |x| x*learning_rate } ).map do |x|
         x.first + x.last
       end
     end
@@ -25,14 +26,14 @@ module SOM
     end
     def to_s
       str = "["
-      map do |n| 
+      map do |n|
         splited_first, splited_second = "",""
         splited_n = n.round(2).to_s.split('.')
         while (splited_n.first.size <= 2) do
           splited_first = splited_n.first.insert(0,'0')
         end
         while (splited_n.last.size <= 2) do
-          splited_second = splited_n.last << '0' 
+          splited_second = splited_n.last << '0'
         end
         n = splited_first + "." + splited_second
       end.each do |n|
@@ -43,4 +44,4 @@ module SOM
       str << "]"
     end
   end
-end 
+end

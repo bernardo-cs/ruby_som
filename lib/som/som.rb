@@ -1,12 +1,13 @@
 require_relative 'functions'
 require_relative 'reportable'
+require_relative './umatrix2.rb'
 
 module SOM
   class SOM
     include Functions
     include Reportable
 
-    attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs, :umatrix, :initial_radius, :initial_learning_rate , :input_patterns
+    attr_accessor :output_space, :input_patterns, :learning_rate, :radius, :bmus_position, :epochs, :umatrix, :initial_radius, :initial_learning_rate , :input_patterns, :max, :min
 
     def initialize learning_rate: 0.6,
                    output_space_size: 4,
@@ -16,6 +17,7 @@ module SOM
                    force_radius: nil
       @epochs = epochs
       @umatrix = nil #Matrix.new( output_space_size ){ Array.new(output_space_size) }
+      @umatrixbla = nil #Matrix.new( output_space_size ){ Array.new(output_space_size) }
       @learning_rate = learning_rate
       @bmus_position = {}
       @input_patterns = input_patterns
@@ -45,10 +47,16 @@ module SOM
 
     def create_umatrix
       @umatrix = UMatrix.new( input_patterns_for_wn, @output_space )
+      @umatrixbla = UMatrixBla.new( @output_space )
       @umatrix.create_grid!
+      @umatrixbla.create_grid!
     end
 
-     def print_umatrix  file_name
+     def print_umatrixbla  file_name,max=@max,min=@min
+      @umatrixbla.convert_to_colour!(@min,@max)
+      @umatrixbla.print_matrix(5,5,file_name: file_name)
+     end
+     def print_umatrix  file_name,max=@max,min=@min
       @umatrix.convert_to_colour!
       @umatrix.print_matrix(5,5,file_name: file_name)
      end
@@ -59,6 +67,7 @@ module SOM
 
     def bmus_to_csv(file_name)
       inst_bmus = bmus()
+      # remove neuroni
       File.open(file_name, 'w'){ |file| @input_patterns.each{ |input_pattern| file.puts( "#{inst_bmus[input_pattern]},#{input_pattern}"  )}  }
     end
 
@@ -86,6 +95,7 @@ module SOM
         file_name = "#{output_folder}\/#{aux}_radius_#{som.radius}_learning_rate_#{som.learning_rate.round(3)}"
         som.output_space.print_matrix(5,5, file_name: file_name + '_som.bmp' )
         som.create_umatrix
+        print_umatrixbla( file_name + "_avg_#{@umatrixbla.grid.avg.round(3)}" + '_umatrixbla.bmp' )
         print_umatrix( file_name + "_avg_#{@umatrix.grid.avg.round(3)}" + '_umatrix.bmp' )
         aux += 1
       end

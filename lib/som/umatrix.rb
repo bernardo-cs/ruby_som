@@ -29,11 +29,11 @@ module SOM
     end
 
     def convert_to_colour(min =nil, max = nil)
-     min ||= @grid.find_min 
-     max ||= @grid.find_max
+     @min ||= min || @grid.find_min
+     @max ||= max || @grid.find_max
      @colour_matrix =  Matrix.new(@output_space.size){ Array.new(@output_space.size) }
      @grid.each_with_position do |avg, pos|
-       @colour_matrix[pos.first][pos.last] = normalize_colour(avg, min, max)
+       @colour_matrix[pos.first][pos.last] = normalize_colour(avg, @min, @max)
      end
      @colour_matrix
     end

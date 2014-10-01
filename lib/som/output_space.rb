@@ -1,4 +1,7 @@
 ## Two Dimensions, squared SOM Grid
+require_relative './matrixable'
+require_relative './printable'
+require_relative './matrix.rb'
 module SOM
   class OutputSpace
     attr_accessor  :grid, :export_path
@@ -6,8 +9,8 @@ module SOM
     include Matrixable
     include Printable
 
-    alias_method :get_neurons_in_radius, :get_elements_in_radius 
-    alias_method :find_neuron_position, :find_element_position 
+    alias_method :get_neurons_in_radius, :get_elements_in_radius
+    alias_method :find_neuron_position, :find_element_position
     alias_method :get_all_neurons, :get_all_elements
     alias_method :add_neuron_at_pos, :add_element_at_pos
     alias_method :neurons_size, :elements_size
@@ -15,13 +18,13 @@ module SOM
     alias_method :get_neurons_in_circular_radius_with_distance, :get_elements_in_circular_radius_with_distance
     alias_method :get_neurons_in_circular_radius, :get_elements_in_circular_radius
 
-    alias_method :update_neuron_at_position, :add_element_at_pos 
+    alias_method :update_neuron_at_position, :add_element_at_pos
 
     def initialize size: 10,
                    radius_type: :circular,
                    random_fill: false,
                    vec_size: 3,
-                   export_path: File.join(Dir.pwd,'images')  
+                   export_path: File.join(Dir.pwd,'images')
       @grid = Matrix.new(size){ Array.new(size) }
       @export_path = export_path
       @size = size
@@ -34,7 +37,7 @@ module SOM
     end
 
     def to_s
-      str = "    \t" 
+      str = "    \t"
       (0..(@size-1)).each{|n| str << " "*neurons_size*4 << "x" + n.to_s + "\t     \t" }
       str << "\n"
       @grid.each_with_index do |row,index|
