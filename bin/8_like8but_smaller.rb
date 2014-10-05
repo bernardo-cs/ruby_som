@@ -8,36 +8,20 @@ require 'yaml'
 gem 'ark_tweet_nlp'
 
 social_network = MiniTwitter::SocialNetwork.new
-social_network = social_network.unmarshal_latest!
+social_network = social_network.unmarshal! 'storage/MiniTwitter::SocialNetwork2014-07-24T18:38:51Z.txt'
 
 puts 'Social Network in Usage Info', social_network.to_s
 
 ## Save tweets text state
-if File.exists? 'tweets_trimmed_text.yaml'
-  puts 'loaded tweets trimmed'
-  tweets_trimmed_text = YAML.load(File.read('tweets_trimmed_text.yaml'))
-else
    tweets_trimmed_text = social_network.all_tweets_trimmed_text
-   puts 'Trimmed tweets'
-end
-if File.exists? 'tweets_text.yaml'
-  puts 'loaded tweets text'
-  tweets_text         = YAML.load(File.read('tweets_text.yaml'))
-else
   tweets_text         = social_network.all_tweets_text
-   puts 'Got all tweets'
-end
-if File.exists? 'tweets_text_tag_ready.yaml'
-  puts 'loaded tweets text tag'
-  tweets_ready_to_tag = YAML.load(File.read('tweets_text_tag_ready.yaml'))
-else
   tweets_ready_to_tag = tweets_text.inject(""){ |acum,t| acum + t.gsub("\n",'').gsub("\t", " ") + "\n"}[0..-2]
-   puts 'Found all tags!'
-end
 ## Find all words in the crawwled tweets that ar of type:
 #  N, ^, #, U = > Common noun, proper noun, hashtags, url or email
+puts 'finding tags...'
 tagged_result = ArkTweetNlp::Parser.find_tags( tweets_ready_to_tag )
 wanted_words  = ArkTweetNlp::Parser.get_words_tagged_as( tagged_result, :N, :^, :"#")
+puts 'tags found'
 res = Set.new
 wanted_words.each do |k,v|
   puts "Word type: " + ArkTweetNlp::Parser::TAGSET[k]
@@ -51,7 +35,7 @@ end
 ## Merging all the trimmed results will lead to ~= 30% reduction in the SVM size
 puts "All unique: " + res.size.to_s
 
-@bin_matrix = DataParser::TweetsBinMatrix.new( tweets_text,  res )
+@bin_matrix = DataParser::TweetsBinMatrix.new( tweets_text,  res , type_of_text: :trim)
 
 som = SOM::SOM.new output_space_size: 10, epochs: 500
 
@@ -65,4 +49,4 @@ som.create_umatrix
 
 puts "Generating Report...."
 som.report( report_neuron_text: false )
-
+binding.pry
