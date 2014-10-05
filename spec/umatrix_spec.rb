@@ -1,5 +1,8 @@
 #require_relative '../lib/som'
-#include SOM
+require_relative '../lib/som/umatrix.rb'
+require_relative '../lib/som/neuron.rb'
+require_relative '../lib/som/som.rb'
+include SOM
 
 describe UMatrix do
 
@@ -15,6 +18,12 @@ describe UMatrix do
       umatrix.create_grid!
       umatrix.grid.each_with_position do |avg, position|
           avg.should eql(umatrix.average_distance(umatrix.output_space[*position], bmus_list[umatrix.output_space[*position]]))
+      end
+      umatrix.grid.each_with_position do |avg, position|
+          neuron = output_space[*position]
+          input_patterns = bmus_list[neuron]
+          average_distance = input_patterns.map{ |i| neuron.real_distance i }.instance_eval{ reduce(:+)/size.to_f }
+          average_distance.should eql(avg)
       end
     end
   end

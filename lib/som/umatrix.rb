@@ -1,3 +1,6 @@
+require_relative './printable.rb'
+require_relative './matrixable.rb'
+require_relative './output_space.rb'
 module SOM
   class UMatrix
     include Printable
